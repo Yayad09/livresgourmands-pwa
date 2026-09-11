@@ -34,7 +34,7 @@ Projet réalisé dans le cadre du cours **Programmation Web avancée**, Institut
 ## Répartition des rôles
 | Membre | Responsabilités |
 |---|---|
-| Yaya & Ayman Abdelaziz  |Travail collectif diagrammes et readme |
+| Yaya Diallo & Ayman Abdelaziz  |Travail collectif diagrammes et readme |
 
 ## Contenu du dépôt
 - `README.md` : ce fichier
