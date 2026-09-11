@@ -3,7 +3,7 @@
 ## Description du projet
 livresgourmands.net est une plateforme de commerce électronique spécialisée dans la vente de livres de cuisine, destinée à tous les niveaux (débutants, amateurs, chefs). Le site se distingue par la gestion de listes de cadeaux personnalisées, la collecte et validation des avis/commentaires clients, et un module de paiement en ligne sécurisé.
 
-Projet réalisé dans le cadre du cours **Programmation Web avancée (420-WA6-AG)**, Institut Grasset, session Automne 2026 (enseignante : Kahina Tamazouzt).
+Projet réalisé dans le cadre du cours **Programmation Web avancée**, Institut Grasset, session Automne 2026 (enseignante : Kahina Tamazouzt).
 
 ## Objectifs de l'étape 01
 - Analyser et modéliser les acteurs et fonctionnalités du site (diagramme de cas d'utilisation).
