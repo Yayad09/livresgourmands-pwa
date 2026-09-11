@@ -34,8 +34,7 @@ Projet réalisé dans le cadre du cours **Programmation Web avancée (420-WA6-AG
 ## Répartition des rôles
 | Membre | Responsabilités |
 |---|---|
-| Yaya | Diagramme de classes, README |
-| Ayman Abdelaziz | Diagramme de cas d'utilisation |
+| Yaya & Ayman Abdelaziz  |Travail collectif diagrammes et readme |
 
 ## Contenu du dépôt
 - `README.md` : ce fichier
