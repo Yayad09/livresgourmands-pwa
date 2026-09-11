@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagramme de cas d'utilisation - livresgourmands.net">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+<mxCell id="1" parent="0" />
+<mxCell id="boundary" value="livresgourmands.net" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=14;fontStyle=1;strokeColor=#2a4d8f;fillColor=none;spacing=8;" vertex="1" parent="1"><mxGeometry x="170" y="-924" width="651" height="1745" as="geometry" /></mxCell>
+<mxCell id="Ami" value="Ami" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="1"><mxGeometry x="25" y="-443" width="50" height="90" as="geometry" /></mxCell>
+<mxCell id="Prestataire" value="Prestataire" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="1"><mxGeometry x="25" y="-269" width="50" height="90" as="geometry" /></mxCell>
+<mxCell id="Gestionnaire" value="Gestionnaire" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="1"><mxGeometry x="25" y="-817" width="50" height="90" as="geometry" /></mxCell>
+<mxCell id="Administrateur" value="Administrateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="1"><mxGeometry x="25" y="603" width="50" height="90" as="geometry" /></mxCell>
+<mxCell id="Editeur" value="Editeur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="1"><mxGeometry x="25" y="-579" width="50" height="90" as="geometry" /></mxCell>
+<mxCell id="Client" value="Client" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="1"><mxGeometry x="25" y="167" width="50" height="90" as="geometry" /></mxCell>
+<mxCell id="Internaute" value="Internaute" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="1"><mxGeometry x="25" y="370" width="50" height="90" as="geometry" /></mxCell>
+<mxCell id="UC_recherche" value="Rechercher / consulter&lt;br&gt;un ouvrage" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="429" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_enregistrer" value="S&amp;#x27;enregistrer / Se connecter" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="129" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_panier" value="Gérer le panier" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="229" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_commande" value="Passer une commande" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="-171" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_historique" value="Consulter l&amp;#x27;historique" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="529" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_liste" value="Creer une liste de cadeaux" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="329" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_avis" value="Laisser un avis" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="-71" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_commentaire" value="Laisser un commentaire" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="29" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_consulterListe" value="Consulter une liste&lt;br&gt;de cadeaux (code)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="-443" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_acheterListe" value="Acheter depuis&lt;br&gt;une liste de cadeaux" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="-343" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_paiement" value="Effectuer un paiement&lt;br&gt;en ligne" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="550" y="-257" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_description" value="Gérer descriptions&lt;br&gt;/ catégories" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="550" y="-654" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_validerCom" value="Valider les commentaires" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="550" y="-554" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_catalogue" value="Gérer catalogue / stock" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="550" y="-854" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_ventes" value="Suivre les ventes" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="550" y="-754" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_maintenir" value="Gérer les utilisateurs" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="550" y="715" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="UC_superviser" value="Superviser les transactions" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="550" y="615" width="231" height="65" as="geometry" /></mxCell>
+<mxCell id="e4001" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Internaute" target="UC_recherche"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4002" value="" style="endArrow=block;endFill=0;html=1;" edge="1" parent="1" source="Client" target="Internaute"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4003" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Client" target="UC_enregistrer"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4004" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Client" target="UC_panier"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4005" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Client" target="UC_commande"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4006" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Client" target="UC_historique"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4007" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Client" target="UC_liste"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4008" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Client" target="UC_avis"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4009" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Client" target="UC_commentaire"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4010" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="UC_commande" target="UC_paiement"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4011" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Ami" target="UC_consulterListe"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4012" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Ami" target="UC_acheterListe"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4013" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="UC_acheterListe" target="UC_paiement"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4014" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Editeur" target="UC_description"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4015" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Editeur" target="UC_validerCom"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4016" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Gestionnaire" target="UC_catalogue"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4017" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Gestionnaire" target="UC_ventes"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4018" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Administrateur" target="UC_maintenir"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4019" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Administrateur" target="UC_superviser"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4020" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Administrateur" target="UC_historique"><mxGeometry relative="1" as="geometry" /></mxCell>
+<mxCell id="e4021" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="Prestataire" target="UC_paiement"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
