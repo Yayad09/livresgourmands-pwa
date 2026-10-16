@@ -1,0 +1,138 @@
+{
+  "info": {
+    "name": "Livresgourmands API",
+    "description": "Étape 02 - Endpoints test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/auth/register", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "auth", "register"]},
+            "body": {"mode": "raw", "raw": "{\"nom\":\"John\",\"email\":\"john@test.com\",\"password\":\"pass123\"}"}
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/auth/login", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "auth", "login"]},
+            "body": {"mode": "raw", "raw": "{\"email\":\"john@test.com\",\"password\":\"pass123\"}"}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ouvrages",
+      "item": [
+        {
+          "name": "GET Tous",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "http://localhost:3000/api/ouvrages", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "ouvrages"]}
+          }
+        },
+        {
+          "name": "GET Un ouvrage",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "http://localhost:3000/api/ouvrages/1", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "ouvrages", "1"]}
+          }
+        },
+        {
+          "name": "POST Créer (gestionnaire)",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Authorization", "value": "Bearer {{token}}"}, {"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/ouvrages", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "ouvrages"]},
+            "body": {"mode": "raw", "raw": "{\"titre\":\"Cuisine Test\",\"auteur\":\"Chef\",\"isbn\":\"123-456\",\"description\":\"Test\",\"prix\":25.50,\"stock\":10,\"categorie_id\":1}"}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Panier",
+      "item": [
+        {
+          "name": "GET Panier",
+          "request": {
+            "method": "GET",
+            "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+            "url": {"raw": "http://localhost:3000/api/panier", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "panier"]}
+          }
+        },
+        {
+          "name": "POST Ajouter item",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Authorization", "value": "Bearer {{token}}"}, {"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/panier/items", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "panier", "items"]},
+            "body": {"mode": "raw", "raw": "{\"ouvrage_id\":1,\"quantite\":2}"}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Commandes",
+      "item": [
+        {
+          "name": "POST Passer commande",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Authorization", "value": "Bearer {{token}}"}, {"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/commandes", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "commandes"]},
+            "body": {"mode": "raw", "raw": "{\"adresse_livraison\":\"123 Main St\",\"mode_livraison\":\"courier\",\"mode_paiement\":\"card\"}"}
+          }
+        },
+        {
+          "name": "GET Historique",
+          "request": {
+            "method": "GET",
+            "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+            "url": {"raw": "http://localhost:3000/api/commandes", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "commandes"]}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Commentaires",
+      "item": [
+        {
+          "name": "POST Soumettre",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Authorization", "value": "Bearer {{token}}"}, {"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/ouvrages/1/commentaires", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "ouvrages", "1", "commentaires"]},
+            "body": {"mode": "raw", "raw": "{\"contenu\":\"Excellent livre!\"}"}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Avis",
+      "item": [
+        {
+          "name": "POST Ajouter avis",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Authorization", "value": "Bearer {{token}}"}, {"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/ouvrages/1/avis", "protocol": "http", "host": ["localhost"], "port": ["3000"], "path": ["api", "ouvrages", "1", "avis"]},
+            "body": {"mode": "raw", "raw": "{\"note\":5}"}
+          }
+        }
+      ]
+    }
+  ]
+}
