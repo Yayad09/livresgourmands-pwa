@@ -24,33 +24,39 @@ npm run dev      # développement (nodemon)
 ## Endpoints disponibles
 
 ### Auth
-- `POST /api/auth/register` — inscription
-- `POST /api/auth/login` — connexion (retourne JWT)
+
+* `POST /api/auth/register` — inscription
+* `POST /api/auth/login` — connexion (retourne JWT)
 
 ### Ouvrages
-- `GET /api/ouvrages` — liste (stock > 0)
-- `GET /api/ouvrages/:id` — détail
-- `POST /api/ouvrages` — créer (gestionnaire/editeur)
-- `PUT /api/ouvrages/:id` — modifier (gestionnaire)
+
+* `GET /api/ouvrages` — liste (stock > 0)
+* `GET /api/ouvrages/:id` — détail
+* `POST /api/ouvrages` — créer (gestionnaire/editeur)
+* `PUT /api/ouvrages/:id` — modifier (gestionnaire)
 
 ### Panier
-- `GET /api/panier` — afficher panier
-- `POST /api/panier/items` — ajouter item
+
+* `GET /api/panier` — afficher panier
+* `POST /api/panier/items` — ajouter item
 
 ### Commandes
-- `POST /api/commandes` — passer commande (décrément stock)
-- `GET /api/commandes` — historique client
+
+* `POST /api/commandes` — passer commande (décrément stock)
+* `GET /api/commandes` — historique client
 
 ### Commentaires
-- `POST /api/ouvrages/:id/commentaires` — soumettre (valide=false)
-- `PUT /api/commentaires/:id/valider` — valider (editeur)
+
+* `POST /api/ouvrages/:id/commentaires` — soumettre (valide=false)
+* `PUT /api/commentaires/:id/valider` — valider (editeur)
 
 ### Avis
-- `POST /api/ouvrages/:id/avis` — ajouter avis (1-5, achat requis)
+
+* `POST /api/ouvrages/:id/avis` — ajouter avis (1-5, achat requis)
 
 ## Équipe
 
-Yaya & [Binôme]
+Yaya \&  Ayman-Abdelaziz Chahboun
 
 ## Règles métier implémentées
 
