@@ -1,59 +1,63 @@
-# Rapport Étape 02 — API & Base de données
+# Rapport Étape 02 : API et base de données
 
-## Schéma de base de données
+## 1. Base de données
 
-**12 tables relationnelles** : users, categories, ouvrages, panier, panier_items, commandes, commande_items, listes_cadeaux, liste_items, avis, commentaires, payments (optionnel)
+Le schéma (`schema.sql`) contient 11 tables : `users`, `categories`, `ouvrages`, `panier`, `panier_items`, `commandes`, `commande_items`, `listes_cadeaux`, `liste_items`, `avis`, `commentaires`.
 
-**Normalisation** :
-- Forme 3NF respectée (pas de redondance)
-- PKs : tous en INT AUTO_INCREMENT
-- FKs : intégrité référentielle activée
-- ENUMs : roles (client/editeur/gestionnaire/administrateur), statuts commande
+Le schéma respecte la 3NF : chaque information n'apparaît qu'à un endroit, sauf le prix unitaire copié dans `panier_items` et `commande_items`, volontairement, pour conserver le prix au moment de l'achat.
 
-**Contraintes implémentées** :
-- `ouvrages.stock >= 0` (filtrage à l'affichage)
-- `avis.note CHECK (1-5)`
-- `commentaires.valide DEFAULT false` (modération)
-- `users.email UNIQUE`
-- `avis UNIQUE (client_id, ouvrage_id)`
+Contraintes :
+- clés primaires auto-incrémentées, clés étrangères sur toutes les relations ;
+- `users.email` et `ouvrages.isbn` uniques ;
+- `avis.note` entre 1 et 5, et un seul avis par client et par ouvrage (`UNIQUE (client_id, ouvrage_id)`) ;
+- `commentaires.valide` vaut `false` par défaut (modération par l'éditeur) ;
+- `commandes.statut` est un ENUM (`en_cours`, `payee`, `annulee`, `expediee`).
 
-## API REST
+## 2. API
 
-**Framework** : Node.js + Express
-**Auth** : JWT (jsonwebtoken) + bcryptjs (hash mot de passe)
-**Validation** : vérifications côté serveur
+Technologies : Node.js, Express, mysql2, JWT (`jsonwebtoken`), bcrypt (`bcryptjs`), express-validator.
 
-**Endpoints** : 17 total
-- Auth (2) : register, login
-- Ouvrages (4) : GET, GET/:id, POST, PUT
-- Panier (2) : GET, POST items
-- Commandes (2) : POST, GET historique
-- Commentaires (2) : POST, PUT/valider
-- Avis (1) : POST
+Le détail des endpoints, des rôles et des codes de réponse est dans `README.md`.
 
-**Règles métier** :
-1. Seuls ouvrages avec stock > 0 affichés publiquement
-2. Stock décrémenté lors de validation commande (transactionnel)
-3. Avis accepté seulement si client a acheté ce livre (vérif API)
-4. Commentaires : valide=false par défaut, édition requise pour publication
-5. Rôles avec middleware : gestionnaire/editeur/administrateur ont droits différents
+### Règles métier implémentées
+1. Seuls les ouvrages en stock (`stock > 0`) sont affichés publiquement.
+2. L'ajout au panier vérifie le stock disponible (transaction avec verrou `FOR UPDATE`).
+3. La commande est atomique : vérification du stock de chaque article, création de la commande, décrément du stock et fermeture du panier dans une seule transaction. En cas d'erreur, tout est annulé.
+4. Un avis n'est accepté que si le client a acheté l'ouvrage.
+5. Un commentaire est créé non validé ; seul un éditeur peut le publier.
+6. Les rôles sont vérifiés par middleware (`client`, `editeur`, `gestionnaire`, `administrateur`).
+7. Les mots de passe sont hachés avec bcrypt ; les tokens JWT expirent après 24 h.
 
-## Livrables
+### Validation et erreurs
+- Les entrées sont validées avec express-validator (types, longueurs, valeurs permises). Une entrée invalide renvoie `400`.
+- Les erreurs de base de données sont centralisées dans un gestionnaire unique qui renvoie `500` sans exposer les détails internes.
+
+## 3. Tests
+
+Tests réalisés manuellement avec PowerShell (`Invoke-RestMethod`) :
+- inscription : `201` puis `409` pour un email déjà utilisé ;
+- connexion : retourne un token et les informations de l'utilisateur ;
+- route protégée sans token : `401 No token` ;
+- route protégée avec token : `200`, panier vide retourné.
+
+La collection Postman (`postman_collection.json`) couvre les routes principales.
+
+## 4. Limites connues
+
+- Paiement : l'intégration Stripe ou PayPal n'est pas implémentée à cette étape.
+- Listes de cadeaux : l'achat depuis une liste par un ami (`acheterDepuisListe`) n'est pas encore branché.
+- Pagination et filtres de recherche : non implémentés.
+- Tests automatisés : aucun test unitaire ; les tests sont manuels.
+- Les routes `PUT /api/users/:id` et la gestion des rôles par un administrateur ne sont pas encore couvertes.
+
+## 5. Fichiers livrés
 
 | Fichier | Contenu |
-|---------|---------|
-| schema.sql | DDL 12 tables + indexes |
-| server.js | API complète (247 lignes) |
-| package.json | Dépendances (Express, JWT, bcrypt) |
-| .env.example | Configuration (DB, JWT_SECRET) |
-| README.md | Instructions install + endpoints |
-| postman_collection.json | Tests endpoints (export JSON) |
-
-## Limitations & améliorations futures
-
-- Paiement : intégration Stripe/PayPal non implémentée (optionnel)
-- Recherche/filtres avancés : pagination à ajouter
-- Cache Redis : non utilisé (perfs OK pour usage étudiant)
-- Logs : console.log basique (Winston à ajouter en prod)
-- Tests : unit tests manquants (jest/mocha recommandé)
-
+|---|---|
+| `schema.sql` | Création des 11 tables et des index |
+| `seed_data.sql` | Données de test |
+| `server.js` | API complète |
+| `package.json` | Dépendances |
+| `.env.example` | Variables d'environnement à configurer |
+| `README.md` | Installation et endpoints |
+| `postman_collection.json` | Requêtes de test |
