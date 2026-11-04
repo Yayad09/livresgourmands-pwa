@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="680" viewBox="0 0 390 680">
+<title>08-Inscription-Mobile</title>
+<rect width="390" height="680" fill="#FFFFFF"/>
+<rect x="16" y="16" width="280.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="156.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="304.0" y="16" width="70.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="339.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">☰</text>
+<text x="26.0" y="106.4" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#212121" text-anchor="start">Créer un compte</text>
+<text x="26.0" y="140.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Nom complet</text>
+<rect x="16" y="156" width="358" height="46" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="26.0" y="226.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Courriel</text>
+<rect x="16" y="242" width="358" height="46" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="26.0" y="312.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Mot de passe (6 caractères minimum)</text>
+<rect x="16" y="328" width="358" height="46" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="26.0" y="398.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Confirmer le mot de passe</text>
+<rect x="16" y="414" width="358" height="46" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="16" y="470" width="358" height="52" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="195.0" y="500.6" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Créer mon compte</text>
+<text x="195.0" y="547.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Déjà inscrit ? Se connecter</text>
+<rect x="16" y="574" width="358" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="195.0" y="623.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">PIED DE PAGE : boutique · service client · ©</text>
+</svg>

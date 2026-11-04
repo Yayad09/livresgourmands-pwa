@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="732" viewBox="0 0 1280 732">
+<title>09-Commande-Desktop</title>
+<rect width="1280" height="732" fill="#FFFFFF"/>
+<rect x="40" y="40" width="197.53246753246756" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="138.8" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="247.53246753246756" y="40" width="455.84415584415586" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="475.5" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Accueil · Catégories ▾ · Listes de cadeaux</text>
+<rect x="713.3766233766235" y="40" width="303.8961038961039" height="44" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="865.3" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">[ Titre ou auteur… ]</text>
+<rect x="1027.2727272727275" y="40" width="212.72727272727275" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="1133.6" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Panier (2) · Compte</text>
+<text x="50.0" y="140.5" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#212121" text-anchor="start">Finaliser ma commande</text>
+<rect x="40" y="176" width="778.6666666666666" height="130" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="429.3" y="246.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">① Adresse de livraison : [ adresse ] [ ville ] [ code postal A1A 1A1 ]</text>
+<rect x="40" y="322" width="778.6666666666666" height="130" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="429.3" y="392.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">② Mode de livraison : ◉ Standard (3-5 j) gratuite ◯ Express (24-48 h) ◯ Retrait en librairie</text>
+<rect x="40" y="468" width="778.6666666666666" height="110" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="429.3" y="528.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">③ Mode de paiement : ◉ Carte bancaire ◯ PayPal · paiement sécurisé</text>
+<text x="860.7" y="194.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="start">Votre commande</text>
+<text x="860.7" y="227.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">2 × Cuisine Facile ........ 51,00 $</text>
+<text x="860.7" y="259.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">1 × Pâtes Parfaites ........ 30,00 $</text>
+<rect x="850.6666666666666" y="276" width="389.3333333333333" height="2" rx="2" fill="#BDBDBD"/>
+<text x="860.7" y="308.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="start">TOTAL ........ 81,00 $</text>
+<rect x="850.6666666666666" y="328" width="389.3333333333333" height="52" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="1045.3" y="359.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Confirmer et payer</text>
+<text x="1045.3" y="405.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Modifier mon panier</text>
+<rect x="40" y="602" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="234.7" y="652.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Livres Gourmands · présentation</text>
+<rect x="445.3333333333333" y="602" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="640.0" y="652.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Boutique : catalogue, listes, panier</text>
+<rect x="850.6666666666666" y="602" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="1045.3" y="652.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Service client : livraison, paiement, contact</text>
+</svg>

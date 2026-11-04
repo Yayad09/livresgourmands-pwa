@@ -9,6 +9,10 @@ il suffit de la reproduire.
 
 ## 1. Figma : wireframes (basse fidélité, noir et blanc)
 
+> **Raccourci :** les 32 wireframes ci-dessous existent déjà en SVG dans `livrables/figma/svg/`.
+> Il suffit de les glisser-déposer dans Figma (mode d'emploi : `livrables/figma/README.md`).
+> La suite de cette section décrit leur contenu, si vous préférez les dessiner vous-mêmes.
+
 ### Mise en place (5 min)
 1. Nouveau fichier Figma : **« livresgourmands - Wireframes »**.
 2. Créer 2 pages Figma : `Desktop` et `Mobile`.

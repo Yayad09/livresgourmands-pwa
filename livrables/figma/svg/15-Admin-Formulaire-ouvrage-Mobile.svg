@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="760" viewBox="0 0 390 760">
+<title>15-Admin-Formulaire-ouvrage-Mobile</title>
+<rect width="390" height="760" fill="#FFFFFF"/>
+<rect x="16" y="16" width="57.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="44.5" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">☰</text>
+<text x="166.5" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Admin User</text>
+<rect x="260.0" y="16" width="114.0" height="44" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="317.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Déconnexion</text>
+<text x="195.0" y="90.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="middle">(Fenêtre modale plein écran)</text>
+<text x="26.0" y="133.3" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#212121" text-anchor="start">Modifier « Risotto &amp; Co »</text>
+<rect x="16" y="152" width="358" height="52" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="182.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Titre *</text>
+<rect x="16" y="214" width="358" height="52" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="244.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">ISBN * (non modifiable)</text>
+<rect x="16" y="276" width="358" height="52" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="306.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Auteur *</text>
+<rect x="16" y="338" width="358" height="52" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="368.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Catégorie * ▾</text>
+<rect x="16" y="400" width="358" height="52" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="430.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Prix · Stock</text>
+<rect x="16" y="462" width="358" height="52" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="492.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Image (URL)</text>
+<rect x="16" y="524" width="358" height="100" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="578.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Description</text>
+<rect x="16" y="634" width="174.0" height="46" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="103.0" y="661.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Annuler</text>
+<rect x="200.0" y="634" width="174.0" height="46" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="287.0" y="661.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Enregistrer</text>
+<rect x="16" y="694" width="358" height="50" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="195.0" y="715.7" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="middle">Le menu s’ouvre en panneau latéral (offcanvas) au</text>
+<text x="195.0" y="730.7" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="middle">clic sur ☰</text>
+</svg>

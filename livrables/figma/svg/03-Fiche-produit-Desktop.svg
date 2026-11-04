@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1074" viewBox="0 0 1280 1074">
+<title>03-Fiche-produit-Desktop</title>
+<rect width="1280" height="1074" fill="#FFFFFF"/>
+<rect x="40" y="40" width="197.53246753246756" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="138.8" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="247.53246753246756" y="40" width="455.84415584415586" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="475.5" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Accueil · Catégories ▾ · Listes de cadeaux</text>
+<rect x="713.3766233766235" y="40" width="303.8961038961039" height="44" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="865.3" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">[ Titre ou auteur… ]</text>
+<rect x="1027.2727272727275" y="40" width="212.72727272727275" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="1133.6" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Panier (2) · Compte</text>
+<text x="50.0" y="124.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Accueil › Catégorie › Titre du livre</text>
+<rect x="40" y="156" width="386.6666666666667" height="520" rx="4" fill="#DDDDDD" stroke="#9E9E9E" stroke-width="1.5"/>
+<line x1="40" y1="156" x2="426.6666666666667" y2="676" stroke="#BDBDBD"/>
+<line x1="426.6666666666667" y1="156" x2="40" y2="676" stroke="#BDBDBD"/>
+<text x="233.3" y="421.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#616161" text-anchor="middle">COUVERTURE (2:3)</text>
+<rect x="466.6666666666667" y="156" width="126.22222222222223" height="26" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="529.8" y="173.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="middle">Catégorie</text>
+<text x="476.7" y="226.5" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#212121" text-anchor="start">Titre du livre (H1)</text>
+<text x="476.7" y="267.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="start">par Auteur</text>
+<text x="476.7" y="301.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">★★★★☆ · 3 avis</text>
+<text x="476.7" y="356.6" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700" fill="#212121" text-anchor="start">25,50 $</text>
+<rect x="466.6666666666667" y="380" width="151.46666666666667" height="28" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="542.4" y="398.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="middle">✓ En stock</text>
+<rect x="466.6666666666667" y="420" width="152.55172413793102" height="50" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="542.9" y="450.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">[ − ] 1 [ + ]</text>
+<rect x="631.2183908045977" y="420" width="254.25287356321837" height="50" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="758.3" y="450.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Ajouter au panier</text>
+<rect x="897.471264367816" y="420" width="203.40229885057468" height="50" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="999.2" y="450.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Liste de cadeaux ▾</text>
+<text x="476.7" y="500.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="start">Description</text>
+<rect x="466.6666666666667" y="520" width="773.3333333333334" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="853.3" y="565.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Texte de description du livre sur plusieurs lignes…</text>
+<rect x="466.6666666666667" y="612" width="773.3333333333334" height="40" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="853.3" y="637.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">ISBN · Catégorie</text>
+<rect x="40" y="700" width="588.0" height="220" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="334.0" y="805.9" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">AVIS DES LECTEURS : liste (nom, date, étoiles) + formulaire « Votre</text>
+<text x="334.0" y="824.6" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">note » (clients)</text>
+<rect x="652.0" y="700" width="588.0" height="220" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="946.0" y="805.9" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">COMMENTAIRES : liste des commentaires validés + champ « Laisser un</text>
+<text x="946.0" y="824.6" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">commentaire »</text>
+<rect x="40" y="944" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="234.7" y="994.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Livres Gourmands · présentation</text>
+<rect x="445.3333333333333" y="944" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="640.0" y="994.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Boutique : catalogue, listes, panier</text>
+<rect x="850.6666666666666" y="944" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="1045.3" y="994.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Service client : livraison, paiement, contact</text>
+</svg>

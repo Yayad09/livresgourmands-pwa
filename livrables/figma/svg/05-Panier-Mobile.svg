@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="730" viewBox="0 0 390 730">
+<title>05-Panier-Mobile</title>
+<rect width="390" height="730" fill="#FFFFFF"/>
+<rect x="16" y="16" width="280.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="156.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="304.0" y="16" width="70.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="339.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">☰</text>
+<text x="26.0" y="102.4" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#212121" text-anchor="start">Mon panier</text>
+<rect x="16" y="128" width="96.66666666666666" height="120" rx="4" fill="#DDDDDD" stroke="#9E9E9E" stroke-width="1.5"/>
+<line x1="16" y1="128" x2="112.66666666666666" y2="248" stroke="#BDBDBD"/>
+<line x1="112.66666666666666" y1="128" x2="16" y2="248" stroke="#BDBDBD"/>
+<text x="64.3" y="192.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#616161" text-anchor="middle">Img</text>
+<text x="132.7" y="142.6" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">Titre du livre</text>
+<text x="132.7" y="167.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="start">Prix unitaire : 30,00 $</text>
+<rect x="122.66666666666666" y="178" width="251.33333333333334" height="36" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="248.3" y="200.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">[−] 2 [+]</text>
+<text x="132.7" y="234.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="start">Retirer · 60,00 $</text>
+<rect x="16" y="264" width="96.66666666666666" height="120" rx="4" fill="#DDDDDD" stroke="#9E9E9E" stroke-width="1.5"/>
+<line x1="16" y1="264" x2="112.66666666666666" y2="384" stroke="#BDBDBD"/>
+<line x1="112.66666666666666" y1="264" x2="16" y2="384" stroke="#BDBDBD"/>
+<text x="64.3" y="328.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#616161" text-anchor="middle">Img</text>
+<text x="132.7" y="278.6" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">Titre du livre</text>
+<text x="132.7" y="303.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="start">Prix unitaire : 30,00 $</text>
+<rect x="122.66666666666666" y="314" width="251.33333333333334" height="36" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="248.3" y="336.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">[−] 2 [+]</text>
+<text x="132.7" y="370.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="start">Retirer · 60,00 $</text>
+<text x="26.0" y="417.6" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">Récapitulatif</text>
+<text x="26.0" y="452.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Sous-total ............ 85,50 $</text>
+<text x="26.0" y="486.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Livraison ...... étape suivante</text>
+<rect x="16" y="504" width="358" height="2" rx="2" fill="#BDBDBD"/>
+<text x="26.0" y="535.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">TOTAL ............ 85,50 $</text>
+<rect x="16" y="556" width="358" height="52" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="195.0" y="586.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Passer la commande</text>
+<rect x="16" y="624" width="358" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="195.0" y="673.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">PIED DE PAGE : boutique · service client · ©</text>
+</svg>

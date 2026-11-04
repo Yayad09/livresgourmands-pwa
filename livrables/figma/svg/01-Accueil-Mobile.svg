@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="1832" viewBox="0 0 390 1832">
+<title>01-Accueil-Mobile</title>
+<rect width="390" height="1832" fill="#FFFFFF"/>
+<rect x="16" y="16" width="280.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="156.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="304.0" y="16" width="70.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="339.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">☰</text>
+<rect x="16" y="76" width="358" height="260" rx="4" fill="#DDDDDD" stroke="#9E9E9E" stroke-width="1.5"/>
+<line x1="16" y1="76" x2="374" y2="336" stroke="#BDBDBD"/>
+<line x1="374" y1="76" x2="16" y2="336" stroke="#BDBDBD"/>
+<text x="195.0" y="210.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#616161" text-anchor="middle">CARROUSEL : titre + accroche + bouton</text>
+<rect x="16" y="352" width="174.0" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="103.0" y="396.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Livraison</text>
+<rect x="200.0" y="352" width="174.0" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="287.0" y="396.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Listes</text>
+<rect x="16" y="448" width="174.0" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="103.0" y="492.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">★ Avis</text>
+<rect x="200.0" y="448" width="174.0" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="287.0" y="492.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Paiement</text>
+<text x="26.0" y="570.4" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#212121" text-anchor="start">Nos livres</text>
+<rect x="16" y="596" width="358" height="36" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="618.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Pastilles catégories (défilement horizontal) ⇢</text>
+<rect x="16" y="648" width="358" height="150" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="719.4" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Filtres empilés : recherche, tri, prix max, en</text>
+<text x="195.0" y="735.7" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">stock</text>
+<rect x="16" y="814" width="358.0" height="300" rx="4" fill="#DDDDDD" stroke="#9E9E9E" stroke-width="1.5"/>
+<line x1="16" y1="814" x2="374.0" y2="1114" stroke="#BDBDBD"/>
+<line x1="374.0" y1="814" x2="16" y2="1114" stroke="#BDBDBD"/>
+<text x="195.0" y="968.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#616161" text-anchor="middle">Couverture</text>
+<text x="26.0" y="1130.8" font-family="Inter, Arial, sans-serif" font-size="11" fill="#212121" text-anchor="start">CATÉGORIE</text>
+<text x="26.0" y="1153.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">Titre du livre</text>
+<text x="26.0" y="1176.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="start">Auteur · ★★★★☆</text>
+<text x="26.0" y="1201.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">29,95 $</text>
+<rect x="199.0" y="1186" width="175.0" height="22" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="286.5" y="1200.8" font-family="Inter, Arial, sans-serif" font-size="11" fill="#212121" text-anchor="middle">En stock</text>
+<rect x="16" y="1214" width="358.0" height="40" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="195.0" y="1238.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Ajouter au panier</text>
+<rect x="16" y="1270" width="358.0" height="300" rx="4" fill="#DDDDDD" stroke="#9E9E9E" stroke-width="1.5"/>
+<line x1="16" y1="1270" x2="374.0" y2="1570" stroke="#BDBDBD"/>
+<line x1="374.0" y1="1270" x2="16" y2="1570" stroke="#BDBDBD"/>
+<text x="195.0" y="1424.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#616161" text-anchor="middle">Couverture</text>
+<text x="26.0" y="1586.8" font-family="Inter, Arial, sans-serif" font-size="11" fill="#212121" text-anchor="start">CATÉGORIE</text>
+<text x="26.0" y="1609.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">Titre du livre</text>
+<text x="26.0" y="1632.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="start">Auteur · ★★★★☆</text>
+<text x="26.0" y="1657.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">29,95 $</text>
+<rect x="199.0" y="1642" width="175.0" height="22" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="286.5" y="1656.8" font-family="Inter, Arial, sans-serif" font-size="11" fill="#212121" text-anchor="middle">En stock</text>
+<rect x="16" y="1670" width="358.0" height="40" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="195.0" y="1694.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Ajouter au panier</text>
+<rect x="16" y="1726" width="358" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="195.0" y="1775.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">PIED DE PAGE : boutique · service client · ©</text>
+</svg>

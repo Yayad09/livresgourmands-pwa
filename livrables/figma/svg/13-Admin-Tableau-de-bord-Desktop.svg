@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780">
+<title>13-Admin-Tableau-de-bord-Desktop</title>
+<rect width="1280" height="780" fill="#FFFFFF"/>
+<rect x="40" y="40" width="235.2" height="50" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="70.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="middle">LOGO Administration</text>
+<rect x="40" y="98" width="235.2" height="42" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="157.6" y="123.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Tableau de bord</text>
+<rect x="40" y="148" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="173.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Ouvrages</text>
+<rect x="40" y="198" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="223.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Commandes</text>
+<rect x="40" y="248" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="273.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Utilisateurs</text>
+<rect x="40" y="326" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="351.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Voir la boutique</text>
+<rect x="40" y="368" width="235.2" height="372" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="999.8" y="64.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Admin User (Administrateur)</text>
+<rect x="1124.9" y="40" width="115.1" height="40" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="1182.5" y="64.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Déconnexion</text>
+<text x="309.2" y="132.5" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#212121" text-anchor="start">Tableau de bord</text>
+<rect x="299.2" y="164" width="223.2" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="410.8" y="199.9" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Ouvrages au catalogue :</text>
+<text x="410.8" y="218.6" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">10</text>
+<rect x="538.4" y="164" width="223.2" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="650.0" y="209.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Ouvrages épuisés : 2</text>
+<rect x="777.5999999999999" y="164" width="223.2" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="889.2" y="209.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Commandes : 2</text>
+<rect x="1016.8" y="164" width="223.2" height="80" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="1128.4" y="199.9" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Chiffre d’affaires :</text>
+<text x="1128.4" y="218.6" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">136,50 $</text>
+<rect x="299.2" y="264" width="368.32" height="260" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="483.4" y="380.5" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">ALERTES DE STOCK : liste (titre + badge</text>
+<text x="483.4" y="399.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Épuisé / 3 restants) · lien « Gérer les</text>
+<text x="483.4" y="418.0" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">ouvrages »</text>
+<rect x="687.52" y="264" width="552.4799999999999" height="260" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="963.8" y="389.9" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">DERNIÈRES COMMANDES : tableau N° | Client | Date | Statut | Total</text>
+<text x="963.8" y="408.6" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">· lien « Toutes les commandes »</text>
+</svg>
