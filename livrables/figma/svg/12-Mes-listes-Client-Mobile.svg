@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="662" viewBox="0 0 390 662">
+<title>12-Mes-listes-Client-Mobile</title>
+<rect width="390" height="662" fill="#FFFFFF"/>
+<rect x="16" y="16" width="280.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="156.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="304.0" y="16" width="70.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="339.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">☰</text>
+<text x="26.0" y="102.4" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#212121" text-anchor="start">Listes de cadeaux</text>
+<rect x="16" y="128" width="358" height="100" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="182.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Accéder à une liste (code)</text>
+<text x="26.0" y="261.6" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">Mes listes</text>
+<text x="26.0" y="294.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Nouvelle liste</text>
+<rect x="16" y="310" width="268.5" height="46" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="150.2" y="337.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">[ Mon anniversaire ]</text>
+<rect x="284.5" y="310" width="89.5" height="46" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="329.2" y="337.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Créer</text>
+<text x="26.0" y="372.7" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="start">Ajoutez des livres depuis leur fiche (bouton « Liste</text>
+<text x="26.0" y="387.7" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="start">de cadeaux »).</text>
+<rect x="16" y="396" width="358" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="195.0" y="422.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">TABLEAU : Liste | Nb livres | Code (copier )</text>
+<rect x="16" y="450" width="358" height="40" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="474.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Mon anniversaire | 3 | ef4392c3…</text>
+<rect x="16" y="500" width="358" height="40" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="524.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Noël | 1 | a81b77e0…</text>
+<rect x="16" y="556" width="358" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="195.0" y="605.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">PIED DE PAGE : boutique · service client · ©</text>
+</svg>

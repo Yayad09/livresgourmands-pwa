@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-label="Couverture : Pâtisserie Pro">
+<rect width="400" height="600" fill="#F7D6E0"/><rect x="0" y="0" width="22" height="600" fill="#6B3E5E"/>
+<rect x="44" y="30" width="330" height="540" fill="none" stroke="#6B3E5E" stroke-width="3" stroke-opacity=".5"/>
+<text x="200" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="4" fill="#6B3E5E">LIVRES GOURMANDS</text>
+<g fill="none" stroke="#6B3E5E" stroke-width="8" stroke-linejoin="round"><path d="M110 330h180v-70H110z" fill="#6B3E5E" fill-opacity=".15"/><path d="M110 260c20 25 40-10 60 10s40-10 60 10 40-15 60-10M130 260v-50h140v50"/><path d="M200 210v-35"/><path d="M200 170c-10-12 0-25 0-30 8 10 12 20 0 30z" fill="#6B3E5E"/></g><text x="200" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#6B3E5E">Pâtisserie</text><text x="200" y="474" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#6B3E5E">Pro</text>
+<text x="200" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#6B3E5E">Julia Child</text></svg>

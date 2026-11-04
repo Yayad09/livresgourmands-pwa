@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780">
+<title>16-Admin-Commandes-Desktop</title>
+<rect width="1280" height="780" fill="#FFFFFF"/>
+<rect x="40" y="40" width="235.2" height="50" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="70.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="middle">LOGO Administration</text>
+<rect x="40" y="98" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="123.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Tableau de bord</text>
+<rect x="40" y="148" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="173.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Ouvrages</text>
+<rect x="40" y="198" width="235.2" height="42" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="157.6" y="223.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Commandes</text>
+<rect x="40" y="248" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="273.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Utilisateurs</text>
+<rect x="40" y="326" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="351.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Voir la boutique</text>
+<rect x="40" y="368" width="235.2" height="372" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="999.8" y="64.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Admin User (Administrateur)</text>
+<rect x="1124.9" y="40" width="115.1" height="40" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="1182.5" y="64.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Déconnexion</text>
+<text x="309.2" y="132.5" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#212121" text-anchor="start">Commandes</text>
+<rect x="1008.8" y="100" width="231.2" height="44" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="1124.4" y="127.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Tous les statuts ▾</text>
+<rect x="299.2" y="164" width="940.8" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="769.6" y="191.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">N° | Date | Client | Articles | Livraison / paiement | Total | Statut</text>
+<rect x="299.2" y="212" width="940.8" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="769.6" y="245.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">#2 | 4 nov. 2026 | Client Test | 3 | standard / carte | 81,00 $ | [En cours ▾]</text>
+<rect x="299.2" y="272" width="940.8" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="769.6" y="305.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">#2 | 4 nov. 2026 | Client Test | 3 | standard / carte | 81,00 $ | [En cours ▾]</text>
+<rect x="299.2" y="332" width="940.8" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="769.6" y="365.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">#2 | 4 nov. 2026 | Client Test | 3 | standard / carte | 81,00 $ | [En cours ▾]</text>
+<rect x="299.2" y="392" width="940.8" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="769.6" y="425.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">#2 | 4 nov. 2026 | Client Test | 3 | standard / carte | 81,00 $ | [En cours ▾]</text>
+</svg>

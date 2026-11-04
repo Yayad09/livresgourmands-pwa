@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="588" viewBox="0 0 390 588">
+<title>07-Connexion-Mobile</title>
+<rect width="390" height="588" fill="#FFFFFF"/>
+<rect x="16" y="16" width="280.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="156.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="304.0" y="16" width="70.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="339.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">☰</text>
+<text x="26.0" y="106.4" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#212121" text-anchor="start">Connexion</text>
+<text x="26.0" y="140.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Courriel</text>
+<rect x="16" y="156" width="358" height="46" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="26.0" y="226.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Mot de passe</text>
+<rect x="16" y="242" width="358" height="46" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="16" y="298" width="358" height="52" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="195.0" y="328.6" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Se connecter</text>
+<text x="195.0" y="367.4" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Pas encore de compte ? Créer un compte · Mot de</text>
+<text x="195.0" y="383.7" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">passe oublié</text>
+<rect x="16" y="392" width="358" height="70" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="423.4" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">Comptes de démonstration : [Client]</text>
+<text x="195.0" y="439.7" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">[Administrateur] [Gestionnaire]</text>
+<rect x="16" y="482" width="358" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="195.0" y="531.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">PIED DE PAGE : boutique · service client · ©</text>
+</svg>

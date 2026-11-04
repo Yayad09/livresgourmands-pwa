@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="934" viewBox="0 0 390 934">
+<title>09-Commande-Mobile</title>
+<rect width="390" height="934" fill="#FFFFFF"/>
+<rect x="16" y="16" width="280.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="156.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="304.0" y="16" width="70.0" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="339.0" y="42.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">☰</text>
+<text x="26.0" y="102.4" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#212121" text-anchor="start">Finaliser ma commande</text>
+<rect x="16" y="128" width="358" height="170" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="217.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">① Adresse : adresse · ville · code postal</text>
+<rect x="16" y="314" width="358" height="130" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="383.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">② Livraison : 3 choix</text>
+<rect x="16" y="460" width="358" height="100" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="195.0" y="514.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#424242" text-anchor="middle">③ Paiement : carte / PayPal</text>
+<text x="26.0" y="593.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">Votre commande</text>
+<text x="26.0" y="627.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">2 × Cuisine Facile ........ 51,00 $</text>
+<text x="26.0" y="659.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">1 × Pâtes Parfaites ........ 30,00 $</text>
+<rect x="16" y="676" width="358" height="2" rx="2" fill="#BDBDBD"/>
+<text x="26.0" y="707.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#212121" text-anchor="start">TOTAL ........ 81,00 $</text>
+<rect x="16" y="728" width="358" height="52" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="195.0" y="758.5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Confirmer et payer</text>
+<text x="195.0" y="805.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Modifier mon panier</text>
+<rect x="16" y="828" width="358" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="195.0" y="877.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">PIED DE PAGE : boutique · service client · ©</text>
+</svg>
