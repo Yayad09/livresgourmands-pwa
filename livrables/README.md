@@ -5,6 +5,7 @@
 | `dossier-conception/Dossier-conception-livresgourmands.pdf` | Dossier de conception (modèle Bonnevaux) : cahier des charges, arborescence, parcours, wireframes desktop et mobile, planche de tendance, charte graphique, justifications UX/UI, maquettes, mockup |
 | `dossier-conception/dossier.html` | Source modifiable du dossier (l'ouvrir dans Chrome puis Imprimer → Enregistrer en PDF, marges : aucune, graphiques d'arrière-plan cochés) |
 | `dossier-conception/captures/` | Captures du site (desktop et mobile), réutilisables dans Adobe XD |
+| `figma/svg/` | 32 wireframes SVG (desktop + mobile) à glisser dans Figma, voir `figma/README.md` |
 | `GUIDE_FIGMA_XD.md` | Liste des frames Figma et des liaisons du prototype XD |
 | `SCRIPT_VIDEO.md` | Déroulé minute par minute de la vidéo de démonstration |
 | `liens.txt` | Liens à compléter (Figma, XD, vidéo), à mettre dans le ZIP |

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780">
+<title>15-Admin-Formulaire-ouvrage-Desktop</title>
+<rect width="1280" height="780" fill="#FFFFFF"/>
+<rect x="40" y="40" width="235.2" height="50" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="70.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="middle">LOGO Administration</text>
+<rect x="40" y="98" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="123.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Tableau de bord</text>
+<rect x="40" y="148" width="235.2" height="42" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="157.6" y="173.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Ouvrages</text>
+<rect x="40" y="198" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="223.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Commandes</text>
+<rect x="40" y="248" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="273.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Utilisateurs</text>
+<rect x="40" y="326" width="235.2" height="42" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="157.6" y="351.9" font-family="Inter, Arial, sans-serif" font-size="14" fill="#212121" text-anchor="middle">Voir la boutique</text>
+<rect x="40" y="368" width="235.2" height="372" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="999.8" y="64.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Admin User (Administrateur)</text>
+<rect x="1124.9" y="40" width="115.1" height="40" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="1182.5" y="64.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">Déconnexion</text>
+<text x="769.6" y="119.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="middle">(Page Ouvrages assombrie en arrière-plan)</text>
+<text x="400.9" y="172.0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#212121" text-anchor="start">Modifier « Risotto &amp; Co »</text>
+<text x="1086.5" y="170.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">✕</text>
+<rect x="390.93333333333334" y="194" width="757.3333333333333" height="2" rx="2" fill="#BDBDBD"/>
+<rect x="390.93333333333334" y="210" width="494.2222222222222" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="638.0" y="243.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Titre * [ ]</text>
+<rect x="901.1555555555556" y="210" width="247.1111111111111" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="1024.7" y="233.9" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">ISBN * [ ISBN-005 ] (non</text>
+<text x="1024.7" y="252.6" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">modifiable)</text>
+<rect x="390.93333333333334" y="280" width="370.66666666666663" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="576.3" y="313.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Auteur * [ ]</text>
+<rect x="777.5999999999999" y="280" width="370.66666666666663" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="962.9" y="313.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Catégorie * [ Choisir… ▾ ]</text>
+<rect x="390.93333333333334" y="350" width="181.33333333333331" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="481.6" y="383.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Prix ($) * [ 27,00 ]</text>
+<rect x="588.2666666666667" y="350" width="181.33333333333331" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="678.9" y="383.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Stock * [ 5 ]</text>
+<rect x="785.5999999999999" y="350" width="362.66666666666663" height="56" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="966.9" y="383.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Image (URL) [ /images/… ]</text>
+<rect x="390.93333333333334" y="420" width="757.3333333333333" height="110" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="769.6" y="480.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Description [ zone de texte ]</text>
+<rect x="390.93333333333334" y="544" width="757.3333333333333" height="2" rx="2" fill="#BDBDBD"/>
+<rect x="842.9333333333334" y="560" width="146.66666666666666" height="46" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="916.3" y="588.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Annuler</text>
+<rect x="1001.6" y="560" width="146.66666666666666" height="46" rx="6" fill="#555555" stroke="#555555" stroke-width="1.5"/>
+<text x="1074.9" y="588.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Enregistrer</text>
+</svg>

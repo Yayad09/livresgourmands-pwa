@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="830" viewBox="0 0 1280 830">
+<title>04-Fiche-produit-epuise-Desktop</title>
+<rect width="1280" height="830" fill="#FFFFFF"/>
+<rect x="40" y="40" width="197.53246753246756" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="138.8" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#212121" text-anchor="middle">LOGO Livres Gourmands</text>
+<rect x="247.53246753246756" y="40" width="455.84415584415586" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="475.5" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Accueil · Catégories ▾ · Listes de cadeaux</text>
+<rect x="713.3766233766235" y="40" width="303.8961038961039" height="44" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="865.3" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">[ Titre ou auteur… ]</text>
+<rect x="1027.2727272727275" y="40" width="212.72727272727275" height="44" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="1133.6" y="67.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Panier (2) · Compte</text>
+<text x="50.0" y="124.5" font-family="Inter, Arial, sans-serif" font-size="13" fill="#212121" text-anchor="start">Accueil › Pâtisserie › Pâtisserie Pro</text>
+<rect x="40" y="156" width="386.6666666666667" height="520" rx="4" fill="#DDDDDD" stroke="#9E9E9E" stroke-width="1.5"/>
+<line x1="40" y1="156" x2="426.6666666666667" y2="676" stroke="#BDBDBD"/>
+<line x1="426.6666666666667" y1="156" x2="40" y2="676" stroke="#BDBDBD"/>
+<text x="233.3" y="421.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#616161" text-anchor="middle">COUVERTURE (grisée)</text>
+<rect x="466.6666666666667" y="156" width="126.22222222222223" height="26" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="529.8" y="173.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="middle">Catégorie</text>
+<text x="476.7" y="226.5" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#212121" text-anchor="start">Pâtisserie Pro</text>
+<text x="476.7" y="267.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="start">par Julia Child</text>
+<text x="476.7" y="322.6" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700" fill="#212121" text-anchor="start">45,99 $</text>
+<rect x="466.6666666666667" y="346" width="151.46666666666667" height="28" rx="6" fill="#FFFFFF" stroke="#555555" stroke-width="1.5"/>
+<text x="542.4" y="364.2" font-family="Inter, Arial, sans-serif" font-size="12" fill="#212121" text-anchor="middle">✕ Épuisé</text>
+<rect x="466.6666666666667" y="386" width="773.3333333333334" height="60" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="853.3" y="421.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">ⓘ Ce livre est actuellement épuisé. Revenez bientôt : nous réapprovisionnons régulièrement.</text>
+<rect x="466.6666666666667" y="458" width="773.3333333333334" height="120" rx="4" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="853.3" y="523.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#424242" text-anchor="middle">Description</text>
+<rect x="40" y="700" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="234.7" y="750.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Livres Gourmands · présentation</text>
+<rect x="445.3333333333333" y="700" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="640.0" y="750.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Boutique : catalogue, listes, panier</text>
+<rect x="850.6666666666666" y="700" width="389.3333333333333" height="90" rx="4" fill="#D6D6D6" stroke="#757575" stroke-width="1.5"/>
+<text x="1045.3" y="750.2" font-family="Inter, Arial, sans-serif" font-size="15" fill="#212121" text-anchor="middle">Service client : livraison, paiement, contact</text>
+</svg>
