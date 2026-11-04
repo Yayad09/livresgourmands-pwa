@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-label="Couverture : Bowls &amp; Salades">
+<rect width="400" height="600" fill="#D8F3DC"/><rect x="0" y="0" width="22" height="600" fill="#22577A"/>
+<rect x="44" y="30" width="330" height="540" fill="none" stroke="#22577A" stroke-width="3" stroke-opacity=".5"/>
+<text x="200" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="4" fill="#22577A">LIVRES GOURMANDS</text>
+<g fill="none" stroke="#22577A" stroke-width="8" stroke-linecap="round"><path d="M200 340c-80-40-90-140-10-200 80 60 70 160 10 200z" fill="#22577A" fill-opacity=".15"/><path d="M200 340V170M200 260l-35-30M200 220l30-25M200 300l40-35"/></g><text x="200" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#22577A">Bowls &amp;</text><text x="200" y="474" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#22577A">Salades</text>
+<text x="200" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#22577A">Hugo Martin</text></svg>

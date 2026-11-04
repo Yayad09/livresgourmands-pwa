@@ -1,0 +1,10 @@
+Projet final - Étape 3 : livresgourmands.net
+Équipe : Yaya Diallo et Ayman Abdelaziz
+Cours 420-WA6-AG, Kahina Tamazouzt, automne 2026
+
+Wireframes Figma (desktop + mobile) : <COLLER LE LIEN FIGMA ICI>
+Prototype interactif Adobe XD     : <COLLER LE LIEN XD ICI>
+Dépôt GitHub                       : https://github.com/yayad09/livresgourmands-pwa
+Vidéo de démonstration             : <COLLER LE LIEN DE LA VIDÉO ICI (YouTube non répertorié, Google Drive ou OneDrive)>
+
+Dossier de conception : Dossier-conception-livresgourmands.pdf (dans ce ZIP)

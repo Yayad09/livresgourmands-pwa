@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Dossier de conception : livresgourmands.net</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --t:#A63D2A; --td:#86301F; --s:#2F4F3A; --c:#FBF7F2; --sa:#F1E6D8; --e:#2B2521; --g:#5E534A; --o:#C98A1B; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, sans-serif; color: var(--e); font-size: 10.5pt; line-height: 1.5; background: #fff; }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; margin: 0 0 .5em; }
+  h2 { font-size: 22pt; color: var(--t); border-bottom: 3px solid var(--t); padding-bottom: 6px; margin-bottom: 14px; }
+  h3 { font-size: 14pt; color: var(--s); margin-top: 14px; }
+  p { margin: 0 0 .7em; }
+  .page { width: 210mm; min-height: 297mm; padding: 18mm 18mm 20mm; page-break-after: always; position: relative; }
+  .page:last-child { page-break-after: auto; }
+  .page::after { content: 'livresgourmands.net · Dossier de conception · Étape 3'; position: absolute; bottom: 9mm; left: 18mm; font-size: 8pt; color: var(--g); }
+  .cover { background: linear-gradient(150deg, var(--td), var(--t) 60%, #C1502E); color: #fff; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover::after { display: none; }
+  .cover h1 { font-size: 40pt; line-height: 1.1; }
+  .cover .books { display: flex; gap: 14px; margin: 30px 0; }
+  .cover .books img { width: 30mm; box-shadow: 0 10px 25px rgba(0,0,0,.35); border-radius: 3px; }
+  .cover .books img:nth-child(2) { transform: translateY(-12px); }
+  .cover .books img:nth-child(4) { transform: translateY(-8px); }
+  .toc { list-style: none; padding: 0; font-size: 12pt; }
+  .toc li { display: flex; border-bottom: 1px dotted #bbb; padding: 7px 0; }
+  .toc li span:first-child { flex: 1; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: 9.5pt; }
+  th, td { border: 1px solid #ddd2c4; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: var(--sa); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .box { background: var(--c); border: 1px solid var(--sa); border-radius: 8px; padding: 10px 12px; }
+  .box h4 { margin: 0 0 4px; font-size: 10.5pt; color: var(--t); }
+  ul { margin: 0 0 .7em; padding-left: 1.2em; }
+  .tag { display: inline-block; background: var(--sa); border-radius: 20px; padding: 1px 9px; font-size: 8.5pt; margin: 1px; }
+
+  /* Arborescence */
+  .tree { font-size: 9.5pt; }
+  .tree .lvl0 { text-align: center; }
+  .node { display: inline-block; border: 2px solid var(--t); background: #fff; border-radius: 8px; padding: 5px 10px; font-weight: 600; }
+  .node.root { background: var(--t); color: #fff; }
+  .node.admin { border-color: var(--s); }
+  .branches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 16px; position: relative; }
+  .branches::before { content: ''; position: absolute; top: -9px; left: 10%; right: 10%; border-top: 2px solid var(--t); }
+  .branch { text-align: center; position: relative; }
+  .branch::before { content: ''; position: absolute; top: -9px; left: 50%; height: 9px; border-left: 2px solid var(--t); }
+  .branch ul { list-style: none; padding: 0; margin-top: 6px; }
+  .branch li { background: var(--c); border: 1px solid var(--sa); border-radius: 6px; margin: 4px 0; padding: 3px 4px; font-size: 8.5pt; }
+
+  /* Wireframes */
+  .wft { font-size: 15pt; color: var(--t); margin-top: 0; }
+  .wfpair { display: flex; gap: 10mm; align-items: flex-start; }
+  .wf { margin: 0; }
+  .wf.desk { flex: 1; }
+  .wf.mob { width: 48mm; }
+  .wf figcaption { font-size: 8.5pt; font-weight: 600; color: var(--g); margin-bottom: 4px; }
+  .frame { border: 2px solid #555; border-radius: 6px; padding: 6px; background: #fff; display: flex; flex-direction: column; gap: 6px; }
+  .wf.mob .frame { border-radius: 14px; padding: 8px 6px; }
+  .wb { background: #EEE; border: 1px dashed #999; border-radius: 3px; font-size: 6.5pt; color: #444; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2px 4px; line-height: 1.2; }
+  .wb.dark { background: #CFCFCF; }
+  .wb.hero { background: #DDD; font-size: 7.5pt; }
+  .wb.cta { background: #888; color: #fff; border-style: solid; font-weight: 700; }
+  .wr { display: flex; }
+  .wr > div { display: flex; flex-direction: column; gap: 6px; }
+  .wgrid { display: grid; gap: 6px; }
+  .wcard { border: 1px dashed #999; border-radius: 3px; padding: 4px; display: flex; flex-direction: column; gap: 3px; }
+  .wimg { background: #DDD; font-size: 6pt; display: flex; align-items: center; justify-content: center; color: #666; }
+  .wl { height: 4px; background: #BBB; }
+  .wl.s { width: 60%; }
+  .wbtn { background: #888; color: #fff; font-size: 6pt; text-align: center; border-radius: 2px; padding: 1px; }
+
+  /* Charte */
+  .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .sw { border-radius: 8px; overflow: hidden; border: 1px solid #ddd; font-size: 8.5pt; }
+  .sw .c { height: 22mm; display: flex; align-items: flex-end; padding: 6px; font-weight: 700; }
+  .sw .i { padding: 6px; background: #fff; }
+  .moodboard { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 34mm; gap: 8px; }
+  .mood { border-radius: 8px; display: flex; align-items: flex-end; padding: 8px; color: #fff; font-weight: 600; font-size: 9pt; overflow: hidden; }
+  .mood img { width: 100%; height: 100%; object-fit: cover; }
+  .btn { display: inline-block; padding: 8px 16px; border-radius: 8px; font-weight: 600; margin: 4px 6px 4px 0; font-size: 10pt; }
+  .b1 { background: var(--t); color: #fff; } .b2 { border: 2px solid var(--t); color: var(--t); } .b3 { background: #6c757d; color: #fff; opacity: .65; }
+  .b4 { background: var(--td); color: #fff; outline: 3px solid var(--o); outline-offset: 2px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 8.5pt; font-weight: 700; margin-right: 6px; }
+  .icons { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; text-align: center; font-size: 8.5pt; }
+  .icons div span { display: flex; align-items: center; justify-content: center; height: 34px; font-size: 18pt; color: var(--t); }
+
+  /* Captures */
+  .shot { margin: 0 0 10px; }
+  .shot img { width: 100%; border: 1px solid #ccc; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+  .shot figcaption { font-size: 8.5pt; color: var(--g); margin-top: 3px; }
+  .phones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .dense { font-size: 9.5pt; line-height: 1.4; }
+  .dense table { font-size: 8.5pt; margin: 4px 0 10px; }
+  .dense th, .dense td { padding: 4px 6px; }
+  .dense h3 { margin-top: 8px; font-size: 13pt; }
+  .phones .shot img { border-radius: 16px; border: 5px solid #222; }
+
+  /* Mockup */
+  .mock { display: flex; align-items: flex-end; justify-content: center; gap: 0; margin-top: 18px; }
+  .laptop { width: 125mm; }
+  .laptop .screen { border: 9px solid #222; border-bottom-width: 12px; border-radius: 10px 10px 0 0; background: #222; }
+  .laptop .screen img { width: 100%; display: block; }
+  .laptop .base { height: 9px; background: linear-gradient(#bbb, #888); border-radius: 0 0 14px 14px; margin: 0 -10mm; }
+  .phone { width: 38mm; margin-left: -18mm; border: 6px solid #111; border-radius: 18px; overflow: hidden; background: #111; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+  .phone img { width: 100%; display: block; }
+</style>
+</head>
+<body>
+
+<!-- Couverture -->
+<section class="page cover">
+  <div>
+    <p style="letter-spacing:4px;font-size:10pt;opacity:.85">PROGRAMMATION WEB AVANCÉE · 420-WA6-AG</p>
+    <h1>Dossier de conception<br>du site web</h1>
+    <p style="font-size:18pt;font-family:'Playfair Display',serif">livresgourmands.net</p>
+    <div class="books">
+      <img src="../../frontend/public/images/ouvrage-1.svg" alt="">
+      <img src="../../frontend/public/images/ouvrage-7.svg" alt="">
+      <img src="../../frontend/public/images/ouvrage-6.svg" alt="">
+      <img src="../../frontend/public/images/ouvrage-9.svg" alt="">
+    </div>
+  </div>
+  <div style="font-size:11pt">
+    <p><strong>Étape 3 :</strong> Conception visuelle et intégration front-end / back-end</p>
+    <p>Réalisé par <strong>Yaya Diallo</strong> et <strong>Ayman Abdelaziz</strong><br>
+    Enseignante : Kahina Tamazouzt · Institut Grasset · Automne 2026</p>
+  </div>
+</section>
+
+<!-- Sommaire -->
+<section class="page">
+  <h2>Sommaire</h2>
+  <ol class="toc">
+    <li><span>I. Introduction et méthodologie</span><span>3</span></li>
+    <li><span>II. Cahier des charges</span><span>4</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;2.1 Présentation de l'entreprise · 2.2 Présentation du projet</span><span>4</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;2.3 Spécifications techniques · 2.4 Budget et planning</span><span>5</span></li>
+    <li><span>III. Arborescence du site et parcours utilisateurs</span><span>6</span></li>
+    <li><span>IV. Wireframes (desktop et mobile)</span><span>8</span></li>
+    <li><span>V. Planche de tendance</span><span>16</span></li>
+    <li><span>VI. Charte graphique</span><span>17</span></li>
+    <li><span>&nbsp;&nbsp;&nbsp;6.1 Logotype · 6.2 Couleurs · 6.3 Typographies · 6.4 Boutons et pictos</span><span>17</span></li>
+    <li><span>VII. Justifications UX/UI et accessibilité</span><span>19</span></li>
+    <li><span>VIII. Maquettes graphiques (haute fidélité)</span><span>20</span></li>
+    <li><span>IX. Mockup</span><span>23</span></li>
+  </ol>
+  <div class="box" style="margin-top:20px">
+    <h4>Liens des livrables</h4>
+    <p style="margin:0">Wireframes Figma : <em>voir le fichier liens.txt du ZIP</em><br>
+    Prototype interactif Adobe XD : <em>voir le fichier liens.txt du ZIP</em><br>
+    Dépôt GitHub : https://github.com/yayad09/livresgourmands-pwa</p>
+  </div>
+</section>
+
+<!-- I. Introduction -->
+<section class="page">
+  <h2>I. Introduction</h2>
+  <p>Ce dossier présente la conception visuelle de <strong>livresgourmands.net</strong>, une boutique en ligne de livres de cuisine. Il fait le lien entre la modélisation des étapes précédentes (cas d'utilisation, diagramme de classes, API REST Node.js/Express/MySQL) et l'interface React livrée dans le dossier <code>frontend/</code> du dépôt.</p>
+  <h3>Méthodologie suivie</h3>
+  <ol>
+    <li><strong>Analyse des besoins</strong> : relecture des cas d'utilisation (Internaute, Client, Ami, Éditeur, Gestionnaire, Administrateur) et des endpoints de l'API.</li>
+    <li><strong>Arborescence</strong> : organisation des pages et des parcours par rôle.</li>
+    <li><strong>Wireframes basse fidélité</strong> (Figma) : structure de chaque page en version desktop et mobile, sans couleur.</li>
+    <li><strong>Planche de tendance et charte graphique</strong> : ambiance, couleurs, typographies, composants.</li>
+    <li><strong>Prototype interactif</strong> (Adobe XD) : simulation des clics, transitions et ajouts au panier pour chaque rôle.</li>
+    <li><strong>Intégration</strong> : développement React + Bootstrap, connexion à l'API avec Axios.</li>
+    <li><strong>Contrôle qualité</strong> : tests responsive (390, 768 et 1280 px), contrastes WCAG AA, navigation au clavier, messages d'erreur.</li>
+  </ol>
+  <h3>Objectifs de la conception</h3>
+  <div class="grid3">
+    <div class="box"><h4>Donner envie</h4>Des couvertures mises en valeur et une ambiance chaleureuse inspirée de la cuisine.</div>
+    <div class="box"><h4>Acheter vite</h4>Ajout au panier en un clic depuis la liste, panier toujours visible, commande en 3 étapes.</div>
+    <div class="box"><h4>Accessible à tous</h4>Contrastes élevés, textes lisibles, site utilisable au clavier et sur mobile.</div>
+  </div>
+</section>
+
+<!-- II. Cahier des charges -->
+<section class="page">
+  <h2>II. Cahier des charges</h2>
+  <h3>2.1 Présentation de l'entreprise</h3>
+  <p><strong>Livres Gourmands</strong> est une librairie spécialisée dans les livres de cuisine, du livre pour débutant à l'ouvrage technique de chef. Elle souhaite vendre en ligne au Québec et se distinguer par trois services : les <strong>listes de cadeaux</strong> partagées par code, des <strong>avis vérifiés</strong> (seuls les acheteurs notent) et des <strong>commentaires modérés</strong> par un éditeur.</p>
+  <h3>2.2 Présentation du projet de site web</h3>
+  <table>
+    <tr><th style="width:28%">Cible</th><td>Cuisiniers débutants et amateurs (25 à 55 ans), passionnés et professionnels ; proches qui cherchent un cadeau.</td></tr>
+    <tr><th>Objectifs</th><td>Vendre en ligne, faire découvrir le catalogue par catégorie, faciliter le cadeau, permettre à l'équipe de gérer le catalogue et les commandes.</td></tr>
+    <tr><th>Fonctionnalités clés</th><td>Catalogue filtrable, fiche produit avec avis, panier persistant, commande (livraison et paiement), comptes, listes de cadeaux, tableau de bord d'administration.</td></tr>
+    <tr><th>Rôles</th><td><span class="tag">Internaute</span><span class="tag">Client</span><span class="tag">Ami</span><span class="tag">Éditeur</span><span class="tag">Gestionnaire</span><span class="tag">Administrateur</span></td></tr>
+    <tr><th>Ton et image</th><td>Chaleureux, gourmand, artisanal mais moderne et digne de confiance.</td></tr>
+  </table>
+  <h3>Fonctionnalités par rôle</h3>
+  <table>
+    <tr><th>Rôle</th><th>Ce qu'il peut faire dans l'interface</th></tr>
+    <tr><td>Internaute</td><td>Parcourir, rechercher, filtrer, consulter une fiche, remplir un panier (conservé dans le navigateur), créer un compte.</td></tr>
+    <tr><td>Client</td><td>Tout ce que fait l'internaute + passer commande, voir ses commandes, noter et commenter, créer des listes de cadeaux.</td></tr>
+    <tr><td>Ami</td><td>Saisir le code personnel d'une liste, voir les livres souhaités, les « offrir » (mise au panier).</td></tr>
+    <tr><td>Éditeur</td><td>Tableau de bord : ajouter et modifier des ouvrages.</td></tr>
+    <tr><td>Gestionnaire</td><td>Tableau de bord : CRUD complet des ouvrages, suivi et changement de statut des commandes.</td></tr>
+    <tr><td>Administrateur</td><td>Tout le tableau de bord + liste des utilisateurs.</td></tr>
+  </table>
+</section>
+
+<section class="page dense">
+  <h3 style="margin-top:0">2.3 Spécifications techniques</h3>
+  <table>
+    <tr><th style="width:28%">Front-end</th><td>React 18 (Vite), React Router 6 (routes protégées par rôle), React-Bootstrap / Bootstrap 5, Bootstrap Icons</td></tr>
+    <tr><th>État global</th><td>Context API : <code>AuthContext</code> (session JWT), <code>CartContext</code> (panier), <code>ToastContext</code> (notifications). Persistance via <code>localStorage</code>.</td></tr>
+    <tr><th>Communication API</th><td>Axios : instance unique avec intercepteur JWT, délai d'attente, traduction des erreurs en messages clairs.</td></tr>
+    <tr><th>Back-end</th><td>Node.js / Express, MySQL, JWT, bcrypt, express-validator (API de l'étape 2, complétée).</td></tr>
+    <tr><th>Compatibilité</th><td>Chrome, Firefox, Safari, Edge récents ; mobile (≥ 360 px), tablette, desktop.</td></tr>
+    <tr><th>Accessibilité</th><td>Objectif WCAG 2.1 niveau AA : contraste ≥ 4,5:1, navigation clavier, libellés de formulaires, textes alternatifs.</td></tr>
+    <tr><th>Outils de conception</th><td>Figma (wireframes), Adobe XD (prototype interactif), Playwright (captures et tests).</td></tr>
+  </table>
+  <h3>Endpoints utilisés par l'interface</h3>
+  <table>
+    <tr><th>Page</th><th>Endpoints</th></tr>
+    <tr><td>Accueil / catalogue</td><td>GET /api/ouvrages, GET /api/categories</td></tr>
+    <tr><td>Fiche produit</td><td>GET /api/ouvrages/:id, POST /api/ouvrages/:id/avis, POST /api/ouvrages/:id/commentaires</td></tr>
+    <tr><td>Panier</td><td>GET /api/panier, POST/PUT/DELETE /api/panier/items</td></tr>
+    <tr><td>Commande</td><td>POST /api/commandes, GET /api/commandes</td></tr>
+    <tr><td>Listes de cadeaux</td><td>GET/POST /api/listes, POST /api/listes/:id/items, GET /api/listes/:code</td></tr>
+    <tr><td>Dashboard</td><td>POST/PUT/DELETE /api/ouvrages, GET /api/admin/commandes, PUT /api/commandes/:id/status, GET /api/users</td></tr>
+  </table>
+  <h3>2.4 Budget et planning (estimation)</h3>
+  <table>
+    <tr><th>Poste</th><th>Durée</th><th>Coût estimé*</th></tr>
+    <tr><td>Analyse, arborescence, wireframes</td><td>2 jours</td><td>1 000 $</td></tr>
+    <tr><td>Charte graphique et prototype XD</td><td>2 jours</td><td>1 000 $</td></tr>
+    <tr><td>Intégration React + connexion API</td><td>6 jours</td><td>3 000 $</td></tr>
+    <tr><td>Tests, accessibilité, corrections</td><td>2 jours</td><td>1 000 $</td></tr>
+    <tr><td>Nom de domaine + hébergement (1 an)</td><td>n/a</td><td>250 $</td></tr>
+    <tr><th>Total</th><th>12 jours</th><th>6 250 $</th></tr>
+  </table>
+  <p style="font-size:8.5pt;color:var(--g)">* Taux indicatif de 500 $ par jour, dans le cadre d'un projet scolaire.</p>
+</section>
+
+<!-- III. Arborescence -->
+<section class="page">
+  <h2>III. Arborescence du site</h2>
+  <div class="tree">
+    <div class="lvl0"><span class="node root">Accueil  /</span></div>
+    <div class="branches">
+      <div class="branch"><span class="node">Catalogue</span><ul><li>Filtre par catégorie</li><li>Recherche titre / auteur</li><li>Tri et prix max</li><li>Fiche produit /ouvrages/:id</li><li>Avis et commentaires</li></ul></div>
+      <div class="branch"><span class="node">Panier</span><ul><li>Modifier les quantités</li><li>Retirer un article</li><li>Commande (client)</li><li>Confirmation</li></ul></div>
+      <div class="branch"><span class="node">Listes de cadeaux</span><ul><li>Accès par code (Ami)</li><li>Mes listes (Client)</li><li>Créer une liste</li></ul></div>
+      <div class="branch"><span class="node">Compte</span><ul><li>Connexion</li><li>Inscription</li><li>Mes commandes</li><li>Déconnexion</li></ul></div>
+      <div class="branch"><span class="node admin">Administration</span><ul><li>Tableau de bord</li><li>Ouvrages (CRUD)</li><li>Commandes</li><li>Utilisateurs</li></ul></div>
+    </div>
+  </div>
+  <h3 style="margin-top:26px">Navigation</h3>
+  <ul>
+    <li><strong>Barre de navigation fixe</strong> présente sur toutes les pages : logo (retour à l'accueil), catégories (menu déroulant), listes de cadeaux, recherche, panier avec compteur, compte.</li>
+    <li><strong>Profondeur maximale de 3 clics</strong> pour atteindre n'importe quel livre : Accueil › Catégorie › Fiche.</li>
+    <li><strong>Fil d'Ariane</strong> sur la fiche produit pour se repérer et remonter à la catégorie.</li>
+    <li><strong>Espace d'administration séparé</strong>, avec son propre menu latéral, pour ne pas mélanger la boutique et la gestion.</li>
+  </ul>
+  <h3>Routes protégées</h3>
+  <table>
+    <tr><th>Route</th><th>Accès</th><th>Sinon</th></tr>
+    <tr><td>/commande, /mes-commandes</td><td>Client connecté</td><td>Redirection vers /connexion, puis retour à la page demandée</td></tr>
+    <tr><td>/admin, /admin/ouvrages</td><td>Administrateur, gestionnaire, éditeur</td><td>/connexion ou accueil avec message</td></tr>
+    <tr><td>/admin/commandes</td><td>Administrateur, gestionnaire</td><td>Lien masqué dans le menu</td></tr>
+    <tr><td>/admin/utilisateurs</td><td>Administrateur</td><td>Lien masqué dans le menu</td></tr>
+  </table>
+</section>
+
+<section class="page dense">
+  <h2>Parcours utilisateurs (prototype XD)</h2>
+  <p>Le prototype Adobe XD reproduit ces trois parcours. Chaque étape correspond à un écran (artboard) relié par une interaction « Tap » avec une transition « Dissolve » (0,3 s) ou « Slide left » pour les étapes de commande.</p>
+  <h3>Parcours Client : acheter un livre</h3>
+  <table>
+    <tr><th>#</th><th>Écran</th><th>Interaction</th><th>Résultat</th></tr>
+    <tr><td>1</td><td>Accueil</td><td>Tap sur la pastille « Pâtisserie »</td><td>Liste filtrée</td></tr>
+    <tr><td>2</td><td>Accueil filtrée</td><td>Tap sur la carte « Macarons et Merveilles »</td><td>Fiche produit</td></tr>
+    <tr><td>3</td><td>Fiche produit</td><td>Tap « + » puis « Ajouter au panier »</td><td>Notification + compteur du panier à 2</td></tr>
+    <tr><td>4</td><td>Fiche (état ajouté)</td><td>Tap sur l'icône panier</td><td>Panier</td></tr>
+    <tr><td>5</td><td>Panier</td><td>Tap « Passer la commande »</td><td>Connexion (si non connecté) puis Commande</td></tr>
+    <tr><td>6</td><td>Commande</td><td>Remplir l'adresse, choisir la livraison et le paiement, tap « Confirmer et payer »</td><td>Confirmation</td></tr>
+  </table>
+  <h3>Parcours Ami : offrir depuis une liste</h3>
+  <table>
+    <tr><th>#</th><th>Écran</th><th>Interaction</th><th>Résultat</th></tr>
+    <tr><td>1</td><td>Accueil</td><td>Tap « Listes de cadeaux »</td><td>Page listes</td></tr>
+    <tr><td>2</td><td>Listes</td><td>Saisir le code reçu, tap « Voir la liste »</td><td>Livres souhaités</td></tr>
+    <tr><td>3</td><td>Liste ouverte</td><td>Tap « Offrir » sur un livre</td><td>Ajout au panier, puis parcours de commande</td></tr>
+  </table>
+  <h3>Parcours Administrateur : gérer le catalogue</h3>
+  <table>
+    <tr><th>#</th><th>Écran</th><th>Interaction</th><th>Résultat</th></tr>
+    <tr><td>1</td><td>Connexion</td><td>Se connecter avec un compte administrateur</td><td>Tableau de bord</td></tr>
+    <tr><td>2</td><td>Tableau de bord</td><td>Tap « Ouvrages » dans le menu latéral</td><td>Liste des ouvrages</td></tr>
+    <tr><td>3</td><td>Ouvrages</td><td>Tap « Ajouter un ouvrage » / icône crayon</td><td>Fenêtre de formulaire (overlay)</td></tr>
+    <tr><td>4</td><td>Formulaire</td><td>Tap « Enregistrer »</td><td>Retour à la liste + notification</td></tr>
+    <tr><td>5</td><td>Ouvrages</td><td>Tap icône corbeille, puis « Supprimer »</td><td>Fenêtre de confirmation puis ligne retirée</td></tr>
+    <tr><td>6</td><td>Commandes</td><td>Changer le statut d'une commande</td><td>Badge mis à jour</td></tr>
+  </table>
+</section>
+
+<!-- IV. Wireframes -->
+<section class="page">
+  <h2>IV. Wireframes</h2>
+  <p>Les wireframes (maquettes basse fidélité) définissent la structure de chaque page sans couleur ni image, pour valider l'organisation de l'information avant le graphisme. Chaque page est conçue en deux formats :</p>
+  <ul>
+    <li><strong>Desktop (1280 px)</strong> : grille de 12 colonnes Bootstrap, 4 livres par ligne, colonnes latérales (récapitulatif du panier, menu d'administration).</li>
+    <li><strong>Mobile (390 px)</strong> : une seule colonne, menu « hamburger », boutons pleine largeur, récapitulatif placé sous la liste.</li>
+  </ul>
+  <p>Conventions : les zones grises représentent du contenu, les zones foncées les éléments de navigation, et les zones pleines les <strong>appels à l'action principaux</strong>. Un seul appel à l'action principal par écran.</p>
+  <div class="box"><h4>Pages couvertes</h4>Accueil · Fiche produit · Panier · Liste de cadeaux · Connexion / inscription · Commande (livraison et paiement) · Dashboard administrateur</div>
+  <p style="margin-top:14px">Ces wireframes sont reproduits dans Figma (un frame « Desktop 1280 » et un frame « iPhone 14 » par page). Voir le fichier <code>GUIDE_FIGMA_XD.md</code> pour la liste exacte des frames.</p>
+</section>
+<section class="page"><h3 class="wft">Wireframe : Accueil</h3>
+<div class="wfpair"><figure class="wf desk"><figcaption>Desktop (1280 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:3"><div class="wb " style="height:24px">Accueil · Catégories ▾ · Listes de cadeaux</div></div><div style="flex:2"><div class="wb " style="height:24px">[ Recherche… ] 🔍</div></div><div style="flex:1"><div class="wb " style="height:24px">🛍 (2) · Compte</div></div></div><div class="wb hero" style="height:90px">CARROUSEL : titre + accroche + bouton « Découvrir »   [image livre]</div><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb " style="height:34px">Atout 1</div></div><div style="flex:1"><div class="wb " style="height:34px">Atout 2</div></div><div style="flex:1"><div class="wb " style="height:34px">Atout 3</div></div><div style="flex:1"><div class="wb " style="height:34px">Atout 4</div></div></div><div class="wb " style="height:22px">Titre « Nos livres » · [Toutes] [Française] [Italienne] [Pâtisserie] …</div><div class="wb " style="height:28px">FILTRES : recherche · tri · prix max · en stock</div><div class="wgrid" style="grid-template-columns:repeat(4,1fr)"><div class="wcard"><div class="wimg" style="height:52px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div><div class="wcard"><div class="wimg" style="height:52px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div><div class="wcard"><div class="wimg" style="height:52px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div><div class="wcard"><div class="wimg" style="height:52px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div><div class="wcard"><div class="wimg" style="height:52px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div><div class="wcard"><div class="wimg" style="height:52px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div><div class="wcard"><div class="wimg" style="height:52px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div><div class="wcard"><div class="wimg" style="height:52px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div></div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure>
+<figure class="wf mob"><figcaption>Mobile (390 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:3"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:1"><div class="wb " style="height:24px">☰</div></div></div><div class="wb hero" style="height:80px">CARROUSEL</div><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb " style="height:30px">Atout</div></div><div style="flex:1"><div class="wb " style="height:30px">Atout</div></div></div><div class="wb " style="height:22px">Pastilles catégories ⇢</div><div class="wb " style="height:50px">Filtres (empilés)</div><div class="wgrid" style="grid-template-columns:repeat(1,1fr)"><div class="wcard"><div class="wimg" style="height:70px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div><div class="wcard"><div class="wimg" style="height:70px">IMG</div><div class="wl"></div><div class="wl s"></div><div class="wbtn">Ajouter</div></div></div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure></div></section><section class="page"><h3 class="wft">Wireframe : Fiche produit</h3>
+<div class="wfpair"><figure class="wf desk"><figcaption>Desktop (1280 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:3"><div class="wb " style="height:24px">Accueil · Catégories ▾ · Listes de cadeaux</div></div><div style="flex:2"><div class="wb " style="height:24px">[ Recherche… ] 🔍</div></div><div style="flex:1"><div class="wb " style="height:24px">🛍 (2) · Compte</div></div></div><div class="wb " style="height:18px">Fil d’Ariane : Accueil › Catégorie › Titre</div><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb " style="height:190px">COUVERTURE</div></div><div style="flex:2"><div class="wb " style="height:18px">Catégorie</div><div class="wb " style="height:30px">TITRE (H1)</div><div class="wb " style="height:20px">Auteur · ★★★★☆ (n avis)</div><div class="wb " style="height:30px">PRIX</div><div class="wb " style="height:18px">Badge stock</div><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb " style="height:30px">[- 1 +]</div></div><div style="flex:2"><div class="wb cta" style="height:30px">AJOUTER AU PANIER</div></div><div style="flex:2"><div class="wb " style="height:30px">Liste de cadeaux ▾</div></div></div><div class="wb " style="height:30px">Description · ISBN · catégorie</div></div></div><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb " style="height:80px">AVIS : liste + formulaire note</div></div><div style="flex:1"><div class="wb " style="height:80px">COMMENTAIRES : liste + formulaire</div></div></div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure>
+<figure class="wf mob"><figcaption>Mobile (390 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:3"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:1"><div class="wb " style="height:24px">☰</div></div></div><div class="wb " style="height:16px">Fil d’Ariane</div><div class="wb " style="height:140px">COUVERTURE</div><div class="wb " style="height:40px">TITRE · auteur · ★</div><div class="wb " style="height:30px">PRIX · stock</div><div class="wb cta" style="height:32px">[- 1 +]  AJOUTER AU PANIER</div><div class="wb " style="height:50px">Description</div><div class="wb " style="height:50px">Avis</div><div class="wb " style="height:50px">Commentaires</div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure></div></section><section class="page"><h3 class="wft">Wireframe : Panier</h3>
+<div class="wfpair"><figure class="wf desk"><figcaption>Desktop (1280 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:3"><div class="wb " style="height:24px">Accueil · Catégories ▾ · Listes de cadeaux</div></div><div style="flex:2"><div class="wb " style="height:24px">[ Recherche… ] 🔍</div></div><div style="flex:1"><div class="wb " style="height:24px">🛍 (2) · Compte</div></div></div><div class="wb " style="height:26px">MON PANIER (n articles)</div><div class="wr" style="gap:6px"><div style="flex:2"><div class="wb " style="height:52px">[img] Titre · prix unitaire · [- q +] · Retirer · sous-total</div><div class="wb " style="height:52px">[img] Titre · prix unitaire · [- q +] · Retirer · sous-total</div><div class="wb " style="height:52px">[img] Titre · prix unitaire · [- q +] · Retirer · sous-total</div><div class="wb " style="height:18px">← Continuer mes achats</div></div><div style="flex:1"><div class="wb " style="height:100px">RÉCAPITULATIF : sous-total · livraison · TOTAL</div><div class="wb cta" style="height:34px">PASSER LA COMMANDE</div></div></div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure>
+<figure class="wf mob"><figcaption>Mobile (390 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:3"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:1"><div class="wb " style="height:24px">☰</div></div></div><div class="wb " style="height:26px">MON PANIER</div><div class="wb " style="height:60px">[img] Titre · [- q +] · Retirer · prix</div><div class="wb " style="height:60px">[img] Titre · [- q +] · Retirer · prix</div><div class="wb " style="height:70px">RÉCAPITULATIF + TOTAL</div><div class="wb cta" style="height:32px">PASSER LA COMMANDE</div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure></div></section><section class="page"><h3 class="wft">Wireframe : Liste de cadeaux</h3>
+<div class="wfpair"><figure class="wf desk"><figcaption>Desktop (1280 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:3"><div class="wb " style="height:24px">Accueil · Catégories ▾ · Listes de cadeaux</div></div><div style="flex:2"><div class="wb " style="height:24px">[ Recherche… ] 🔍</div></div><div style="flex:1"><div class="wb " style="height:24px">🛍 (2) · Compte</div></div></div><div class="wb " style="height:30px">LISTES DE CADEAUX (H1) + accroche</div><div class="wr" style="gap:6px"><div style="flex:3"><div class="wb " style="height:40px">ACCÉDER À UNE LISTE : [code personnel] [Voir]</div><div class="wb " style="height:44px">[img] Titre · souhaité · stock · OFFRIR</div><div class="wb " style="height:44px">[img] Titre · souhaité · stock · OFFRIR</div><div class="wb " style="height:44px">[img] Titre · souhaité · stock · OFFRIR</div></div><div style="flex:2"><div class="wb " style="height:40px">MES LISTES (client) : [nom] [Créer]</div><div class="wb " style="height:90px">Tableau : liste · nb livres · code (copier)</div></div></div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure>
+<figure class="wf mob"><figcaption>Mobile (390 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:3"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:1"><div class="wb " style="height:24px">☰</div></div></div><div class="wb " style="height:26px">LISTES DE CADEAUX</div><div class="wb " style="height:40px">[code personnel] [Voir]</div><div class="wb " style="height:44px">[img] Titre · OFFRIR</div><div class="wb " style="height:44px">[img] Titre · OFFRIR</div><div class="wb " style="height:70px">MES LISTES + créer</div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure></div></section><section class="page"><h3 class="wft">Wireframe : Connexion / inscription</h3>
+<div class="wfpair"><figure class="wf desk"><figcaption>Desktop (1280 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:3"><div class="wb " style="height:24px">Accueil · Catégories ▾ · Listes de cadeaux</div></div><div style="flex:2"><div class="wb " style="height:24px">[ Recherche… ] 🔍</div></div><div style="flex:1"><div class="wb " style="height:24px">🛍 (2) · Compte</div></div></div><div class="wr" style="gap:6px"><div style="flex:1"></div><div style="flex:2"><div class="wb " style="height:26px">CONNEXION (H1)</div><div class="wb " style="height:30px">Courriel</div><div class="wb " style="height:30px">Mot de passe</div><div class="wb cta" style="height:32px">SE CONNECTER</div><div class="wb " style="height:20px">Pas de compte ? Créer un compte · Mot de passe oublié</div><div class="wb " style="height:40px">Comptes de démonstration</div></div><div style="flex:1"></div></div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure>
+<figure class="wf mob"><figcaption>Mobile (390 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:3"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:1"><div class="wb " style="height:24px">☰</div></div></div><div class="wb " style="height:26px">CONNEXION</div><div class="wb " style="height:30px">Courriel</div><div class="wb " style="height:30px">Mot de passe</div><div class="wb cta" style="height:32px">SE CONNECTER</div><div class="wb " style="height:20px">Créer un compte</div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure></div></section><section class="page"><h3 class="wft">Wireframe : Commande (livraison et paiement)</h3>
+<div class="wfpair"><figure class="wf desk"><figcaption>Desktop (1280 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:3"><div class="wb " style="height:24px">Accueil · Catégories ▾ · Listes de cadeaux</div></div><div style="flex:2"><div class="wb " style="height:24px">[ Recherche… ] 🔍</div></div><div style="flex:1"><div class="wb " style="height:24px">🛍 (2) · Compte</div></div></div><div class="wb " style="height:26px">FINALISER MA COMMANDE</div><div class="wr" style="gap:6px"><div style="flex:2"><div class="wb " style="height:70px">① ADRESSE : adresse · ville · code postal</div><div class="wb " style="height:60px">② LIVRAISON : ( ) standard ( ) express ( ) retrait</div><div class="wb " style="height:50px">③ PAIEMENT : ( ) carte ( ) PayPal</div></div><div style="flex:1"><div class="wb " style="height:110px">VOTRE COMMANDE : lignes · TOTAL</div><div class="wb cta" style="height:34px">CONFIRMER ET PAYER</div></div></div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure>
+<figure class="wf mob"><figcaption>Mobile (390 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:3"><div class="wb dark" style="height:24px">LOGO</div></div><div style="flex:1"><div class="wb " style="height:24px">☰</div></div></div><div class="wb " style="height:26px">FINALISER</div><div class="wb " style="height:60px">① Adresse</div><div class="wb " style="height:50px">② Livraison</div><div class="wb " style="height:40px">③ Paiement</div><div class="wb cta" style="height:50px">Total + CONFIRMER</div><div class="wb dark" style="height:26px">PIED DE PAGE : liens boutique · service client · ©</div></div></figure></div></section><section class="page"><h3 class="wft">Wireframe : Dashboard administrateur</h3>
+<div class="wfpair"><figure class="wf desk"><figcaption>Desktop (1280 px)</figcaption><div class="frame"><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb dark" style="height:300px">MENU LATÉRAL : Tableau de bord · Ouvrages · Commandes · Utilisateurs · Boutique</div></div><div style="flex:4"><div class="wb " style="height:24px">Barre : nom · rôle · Déconnexion</div><div class="wr" style="gap:6px"><div style="flex:1"><div class="wb " style="height:44px">Nb ouvrages</div></div><div style="flex:1"><div class="wb " style="height:44px">Épuisés</div></div><div style="flex:1"><div class="wb " style="height:44px">Commandes</div></div><div style="flex:1"><div class="wb " style="height:44px">CA</div></div></div><div class="wr" style="gap:6px"><div style="flex:2"><div class="wb " style="height:120px">ALERTES DE STOCK</div></div><div style="flex:3"><div class="wb " style="height:120px">DERNIÈRES COMMANDES (tableau)</div></div></div><div class="wb " style="height:90px">OUVRAGES : [+ Ajouter] · recherche · tableau avec ✎ / 🗑</div></div></div></div></figure>
+<figure class="wf mob"><figcaption>Mobile (390 px)</figcaption><div class="frame"><div class="wb " style="height:26px">☰ · nom · Déconnexion</div><div class="wb " style="height:36px">Stat</div><div class="wb " style="height:36px">Stat</div><div class="wb " style="height:70px">Alertes de stock</div><div class="wb " style="height:90px">Tableau (défilement horizontal)</div><div class="wb dark" style="height:30px">Menu = panneau latéral (offcanvas)</div></div></figure></div></section>
+
+<!-- V. Planche de tendance -->
+<section class="page">
+  <h2>V. Planche de tendance</h2>
+  <p>L'ambiance recherchée est celle d'une <strong>cuisine de famille chaleureuse</strong> : terre cuite, herbes fraîches, papier crème des vieux livres de recettes, touches dorées du pain et du caramel. Elle doit rester sobre pour laisser la vedette aux couvertures des livres.</p>
+  <div class="moodboard">
+    <div class="mood" style="background:#A63D2A;grid-row:span 2">Terre cuite<br>chaleur, appétit</div>
+    <div class="mood" style="background:#2F4F3A">Herbes fraîches</div>
+    <div class="mood" style="background:#F1E6D8;color:#2B2521">Papier de livre ancien</div>
+    <div class="mood" style="background:#C98A1B">Caramel, pain doré</div>
+    <div class="mood" style="padding:0"><img src="../../frontend/public/images/ouvrage-2.svg" alt=""></div>
+    <div class="mood" style="padding:0"><img src="../../frontend/public/images/ouvrage-8.svg" alt=""></div>
+    <div class="mood" style="background:#2B2521">Encre, typographie éditoriale</div>
+    <div class="mood" style="background:linear-gradient(135deg,#FBF7F2,#F1E6D8);color:#2B2521;grid-column:span 2">Beaucoup d'espace blanc, mise en page de magazine culinaire</div>
+    <div class="mood" style="padding:0"><img src="../../frontend/public/images/ouvrage-9.svg" alt=""></div>
+    <div class="mood" style="background:#6B3E5E">Touche pâtisserie</div>
+  </div>
+  <h3>Mots-clés</h3>
+  <p><span class="tag">chaleureux</span><span class="tag">gourmand</span><span class="tag">artisanal</span><span class="tag">éditorial</span><span class="tag">naturel</span><span class="tag">rassurant</span><span class="tag">lisible</span></p>
+  <h3>Inspirations</h3>
+  <p>Mises en page de magazines culinaires (titres à empattement, grandes images), sites de librairies indépendantes (cartes de livres sobres) et boutiques e-commerce modernes (panier toujours accessible, retours immédiats).</p>
+</section>
+
+<!-- VI. Charte graphique -->
+<section class="page">
+  <h2>VI. Charte graphique</h2>
+  <h3>6.1 Logotype</h3>
+  <div class="grid2" style="align-items:center">
+    <div style="display:flex;align-items:center;gap:12px;font-family:'Playfair Display',serif;font-size:26pt;font-weight:700">
+      <img src="../../frontend/public/favicon.svg" width="64" alt=""> Livres <span style="color:#A63D2A">&nbsp;Gourmands</span>
+    </div>
+    <p>Un <strong>livre ouvert</strong> stylisé dans un carré arrondi terre cuite. Le nom associe un serif élégant (« Livres » en encre, « Gourmands » en terre cuite). Le pictogramme seul sert d'icône d'application et de favicon.</p>
+  </div>
+  <h3>6.2 Couleurs</h3>
+  <div class="swatches">
+    <div class="sw"><div class="c" style="background:#A63D2A;color:#fff">Terre cuite</div><div class="i">#A63D2A<br>Boutons, liens, prix actifs<br><strong>6,3:1</strong> sur blanc</div></div>
+    <div class="sw"><div class="c" style="background:#2F4F3A;color:#fff">Vert sauge</div><div class="i">#2F4F3A<br>Pied de page, admin, prix<br><strong>9,1:1</strong> sur blanc</div></div>
+    <div class="sw"><div class="c" style="background:#FBF7F2;color:#2B2521">Crème</div><div class="i">#FBF7F2<br>Fond des pages<br>Moins agressif que le blanc pur</div></div>
+    <div class="sw"><div class="c" style="background:#2B2521;color:#fff">Encre</div><div class="i">#2B2521<br>Texte principal<br><strong>14,2:1</strong> sur crème</div></div>
+    <div class="sw"><div class="c" style="background:#86301F;color:#fff">Terre cuite foncée</div><div class="i">#86301F<br>Survol des boutons</div></div>
+    <div class="sw"><div class="c" style="background:#F1E6D8;color:#2B2521">Sable</div><div class="i">#F1E6D8<br>Bordures, encadrés</div></div>
+    <div class="sw"><div class="c" style="background:#5E534A;color:#fff">Gris chaud</div><div class="i">#5E534A<br>Texte secondaire<br><strong>7,0:1</strong> sur crème</div></div>
+    <div class="sw"><div class="c" style="background:#C98A1B;color:#2B2521">Or</div><div class="i">#C98A1B<br>Étoiles, contour du focus clavier</div></div>
+  </div>
+  <p style="margin-top:10px">Couleurs d'état (Bootstrap) : vert = en stock / succès, jaune = stock faible, gris = épuisé, rouge = erreur. L'état n'est <strong>jamais transmis par la couleur seule</strong> : chaque badge a aussi une icône et un texte.</p>
+</section>
+
+<section class="page">
+  <h3 style="margin-top:0">6.3 Typographies</h3>
+  <div class="grid2">
+    <div class="box">
+      <p style="font-family:'Playfair Display',serif;font-size:28pt;margin:0;font-weight:700">Playfair Display</p>
+      <p style="font-family:'Playfair Display',serif;font-size:13pt">Aa Bb Cc · Titres et logo</p>
+      <p style="margin:0">Serif à fort contraste, évoque l'édition et les livres de cuisine haut de gamme. Utilisée uniquement pour les titres (H1 à H3) afin de garder la lisibilité.</p>
+    </div>
+    <div class="box">
+      <p style="font-size:28pt;margin:0;font-weight:700">Inter</p>
+      <p style="font-size:13pt">Aa Bb Cc 0123 · Texte et interface</p>
+      <p style="margin:0">Sans-serif conçue pour les écrans : très lisible en petite taille, chiffres nets pour les prix. Graisses 400 (texte), 600 (boutons), 700 (prix).</p>
+    </div>
+  </div>
+  <table>
+    <tr><th>Élément</th><th>Police</th><th>Taille (desktop / mobile)</th></tr>
+    <tr><td>H1 titre de page</td><td>Playfair Display 700</td><td>40 px / 32 px</td></tr>
+    <tr><td>H2 section</td><td>Playfair Display 700</td><td>28 px / 24 px</td></tr>
+    <tr><td>Texte courant</td><td>Inter 400</td><td>16 px (jamais moins de 14 px)</td></tr>
+    <tr><td>Prix</td><td>Inter 700, vert sauge</td><td>20 px (carte) / 40 px (fiche)</td></tr>
+    <tr><td>Boutons</td><td>Inter 600</td><td>16 px / 18 px pour les boutons principaux</td></tr>
+  </table>
+
+  <h3>6.4 Boutons et pictos</h3>
+  <p>
+    <span class="btn b1">Ajouter au panier</span>
+    <span class="btn b2">Voir le catalogue</span>
+    <span class="btn b4">Focus clavier</span>
+    <span class="btn b3">Épuisé</span>
+  </p>
+  <p style="font-size:9pt">Bouton principal plein terre cuite (une seule action principale par zone), bouton secondaire en contour, état focus avec un contour or de 3 px bien visible, état désactivé grisé avec un texte explicite.</p>
+  <p>
+    <span class="badge" style="background:#198754;color:#fff">✓ En stock</span>
+    <span class="badge" style="background:#ffc107;color:#2B2521">! Plus que 3 en stock</span>
+    <span class="badge" style="background:#6c757d;color:#fff">✕ Épuisé</span>
+    <span class="badge" style="background:#ffc107;color:#2B2521">En cours</span>
+    <span class="badge" style="background:#198754;color:#fff">Expédiée</span>
+  </p>
+  <p style="font-size:9pt;margin-top:10px">Pictogrammes : bibliothèque <strong>Bootstrap Icons</strong> (trait fin, cohérent avec Inter). Toujours accompagnés d'un texte ou d'un <code>aria-label</code>.</p>
+  <div class="icons">
+    <div><span>🛍</span>Panier</div><div><span>🔍</span>Recherche</div><div><span>🎁</span>Liste de cadeaux</div>
+    <div><span>★</span>Avis</div><div><span>🚚</span>Livraison</div><div><span>🔒</span>Paiement sécurisé</div>
+  </div>
+  <h3>Composants</h3>
+  <p style="font-size:9.5pt">Carte livre (couverture 2:3, catégorie, titre, auteur, note, prix, badge de stock, bouton), sélecteur de quantité (− / champ / +), notifications (coin inférieur droit, 4 s), fenêtres modales (formulaire et confirmation de suppression), tableaux d'administration avec défilement horizontal sur mobile.</p>
+</section>
+
+<!-- VII. Justifications -->
+<section class="page dense">
+  <h2>VII. Justifications UX/UI et accessibilité</h2>
+  <table>
+    <tr><th style="width:30%">Choix</th><th>Justification</th></tr>
+    <tr><td>Carrousel en haut de l'accueil</td><td>Met en avant 3 messages clés (catalogue, cuisine du monde, listes de cadeaux) sans surcharger la page. Pause au survol, indicateurs, flèches et défilement lent (6 s).</td></tr>
+    <tr><td>Filtres instantanés (pastilles, recherche, tri, prix, stock)</td><td>Résultats mis à jour sans recharger la page ; nombre de résultats annoncé aux lecteurs d'écran (<code>aria-live</code>). Les pastilles indiquent leur état (<code>aria-pressed</code>).</td></tr>
+    <tr><td>Bouton « Ajouter au panier » sur chaque carte</td><td>Réduit le nombre de clics pour acheter. Un livre épuisé affiche un bouton désactivé « Épuisé » plutôt que de disparaître : l'utilisateur comprend pourquoi.</td></tr>
+    <tr><td>Panier persistant (localStorage + API)</td><td>Le panier survit à la fermeture du navigateur. À la connexion, il est fusionné avec le panier du compte pour ne rien perdre.</td></tr>
+    <tr><td>Commande en 3 étapes numérotées</td><td>Adresse, livraison, paiement : l'utilisateur sait où il en est ; le récapitulatif reste visible à droite (desktop).</td></tr>
+    <tr><td>Messages d'erreur explicites</td><td>« Impossible de joindre le serveur… », « Stock insuffisant : il reste 3 exemplaires », « Courriel ou mot de passe incorrect », avec bouton « Réessayer » quand c'est utile.</td></tr>
+    <tr><td>Validation des formulaires</td><td>Messages sous chaque champ (code postal au format A1A 1A1, mot de passe de 6 caractères, confirmation identique).</td></tr>
+    <tr><td>Dashboard séparé, menu latéral</td><td>Navigation claire pour l'équipe ; le menu ne montre que les sections permises par le rôle ; panneau latéral sur mobile.</td></tr>
+  </table>
+  <h3>Liste de contrôle accessibilité (WCAG 2.1 AA)</h3>
+  <ul>
+    <li>Contraste du texte ≥ 4,5:1 partout (voir les ratios de la palette) ; texte de base de 16 px.</li>
+    <li>Lien « Aller au contenu principal » pour les utilisateurs du clavier ; contour de focus or très visible.</li>
+    <li>Structure sémantique : <code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code>, un seul H1 par page, titres hiérarchisés.</li>
+    <li>Tous les champs ont un <code>label</code> ; les boutons à icône ont un <code>aria-label</code> (« Retirer Pâtes Parfaites du panier »).</li>
+    <li>Images de couverture décrites ; images décoratives avec <code>alt=""</code>.</li>
+    <li>Notifications annoncées (<code>role="status"</code> / <code>alert</code>) ; titre de l'onglet mis à jour sur chaque page.</li>
+    <li>Animations désactivées si l'utilisateur a choisi « réduire les animations ».</li>
+    <li>Responsive testé à 390, 768 et 1280 px, sans défilement horizontal.</li>
+  </ul>
+</section>
+
+<!-- VIII. Maquettes -->
+<section class="page">
+  <h2>VIII. Maquettes graphiques</h2>
+  <p>Maquettes haute fidélité issues de l'intégration React (données réelles provenant de l'API).</p>
+  <div class="grid2">
+    <figure class="shot"><img src="captures/accueil.jpg" alt=""><figcaption>Accueil : carrousel, atouts, filtres</figcaption></figure>
+    <figure class="shot"><img src="captures/produit.jpg" alt=""><figcaption>Fiche produit</figcaption></figure>
+    <figure class="shot"><img src="captures/panier.jpg" alt=""><figcaption>Panier dynamique</figcaption></figure>
+    <figure class="shot"><img src="captures/commande.jpg" alt=""><figcaption>Commande : livraison et paiement</figcaption></figure>
+    <figure class="shot"><img src="captures/cadeaux.jpg" alt=""><figcaption>Listes de cadeaux (accès par code)</figcaption></figure>
+    <figure class="shot"><img src="captures/connexion.jpg" alt=""><figcaption>Connexion</figcaption></figure>
+  </div>
+</section>
+
+<section class="page">
+  <h2>Maquettes : espace administrateur</h2>
+  <div class="grid2">
+    <figure class="shot"><img src="captures/admin-dashboard.jpg" alt=""><figcaption>Tableau de bord : indicateurs, alertes de stock</figcaption></figure>
+    <figure class="shot"><img src="captures/admin-ouvrages.jpg" alt=""><figcaption>Gestion des ouvrages</figcaption></figure>
+    <figure class="shot"><img src="captures/admin-formulaire.jpg" alt=""><figcaption>Formulaire d'ajout / modification</figcaption></figure>
+    <figure class="shot"><img src="captures/admin-commandes.jpg" alt=""><figcaption>Commandes et changement de statut</figcaption></figure>
+  </div>
+</section>
+
+<section class="page">
+  <h2>Maquettes : version mobile</h2>
+  <div class="phones">
+    <figure class="shot"><img src="captures/mobile-accueil.jpg" alt=""><figcaption>Accueil</figcaption></figure>
+    <figure class="shot"><img src="captures/mobile-catalogue.jpg" alt=""><figcaption>Filtres et livres</figcaption></figure>
+    <figure class="shot"><img src="captures/mobile-produit.jpg" alt=""><figcaption>Fiche produit</figcaption></figure>
+    <figure class="shot"><img src="captures/mobile-panier.jpg" alt=""><figcaption>Panier</figcaption></figure>
+    <figure class="shot"><img src="captures/mobile-menu.jpg" alt=""><figcaption>Menu ouvert</figcaption></figure>
+  </div>
+</section>
+
+<!-- IX. Mockup -->
+<section class="page">
+  <h2>IX. Mockup</h2>
+  <p>Mise en situation du site sur ordinateur portable et téléphone : la même identité visuelle s'adapte à chaque écran.</p>
+  <div class="mock">
+    <div class="laptop"><div class="screen"><img src="captures/accueil.jpg" alt=""></div><div class="base"></div></div>
+    <div class="phone"><img src="captures/mobile-produit.jpg" alt=""></div>
+  </div>
+  <div class="mock" style="margin-top:14px">
+    <div class="laptop"><div class="screen"><img src="captures/admin-dashboard.jpg" alt=""></div><div class="base"></div></div>
+    <div class="phone"><img src="captures/mobile-panier.jpg" alt=""></div>
+  </div>
+  <h3 style="margin-top:24px">Conclusion</h3>
+  <p>La conception s'appuie directement sur le modèle de classes et l'API : chaque écran correspond à des cas d'utilisation et à des endpoints précis. La charte (terre cuite, sauge, crème ; Playfair Display et Inter) donne une identité gourmande et chaleureuse tout en respectant les exigences de contraste et de lisibilité.</p>
+</section>
+
+</body>
+</html>

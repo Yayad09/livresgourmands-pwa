@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-label="Couverture : Cuisine Facile">
+<rect width="400" height="600" fill="#F3D9B1"/><rect x="0" y="0" width="22" height="600" fill="#A63D2A"/>
+<rect x="44" y="30" width="330" height="540" fill="none" stroke="#A63D2A" stroke-width="3" stroke-opacity=".5"/>
+<text x="200" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="4" fill="#A63D2A">LIVRES GOURMANDS</text>
+<g fill="none" stroke="#A63D2A" stroke-width="8" stroke-linecap="round"><path d="M110 250h180v60a40 40 0 0 1-40 40H150a40 40 0 0 1-40-40z" fill="#A63D2A" fill-opacity=".15"/><path d="M90 250h220M160 230v-15h80v15"/><path d="M170 200c-10-20 10-30 0-50M200 200c-10-20 10-30 0-50M230 200c-10-20 10-30 0-50"/></g><text x="200" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#A63D2A">Cuisine</text><text x="200" y="474" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#A63D2A">Facile</text>
+<text x="200" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#A63D2A">Gordon Ramsay</text></svg>
