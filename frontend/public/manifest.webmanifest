@@ -1,0 +1,10 @@
+{
+  "name": "Livres Gourmands",
+  "short_name": "LivresGourmands",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF7F2",
+  "theme_color": "#A63D2A",
+  "lang": "fr",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

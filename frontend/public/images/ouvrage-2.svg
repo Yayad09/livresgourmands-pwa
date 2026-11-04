@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-label="Couverture : Pâtes Parfaites">
+<rect width="400" height="600" fill="#F6E7C1"/><rect x="0" y="0" width="22" height="600" fill="#2F5D3A"/>
+<rect x="44" y="30" width="330" height="540" fill="none" stroke="#2F5D3A" stroke-width="3" stroke-opacity=".5"/>
+<text x="200" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="4" fill="#2F5D3A">LIVRES GOURMANDS</text>
+<g fill="none" stroke="#2F5D3A" stroke-width="8" stroke-linecap="round"><ellipse cx="200" cy="290" rx="110" ry="35" fill="#2F5D3A" fill-opacity=".15"/><path d="M130 280c20-40 40 10 60-30s40 20 60-20 30 10 20 40M150 290c15-25 35 5 50-20s35 10 50-15"/><path d="M270 150l-40 120M295 160l-50 110"/></g><text x="200" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#2F5D3A">Pâtes</text><text x="200" y="474" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#2F5D3A">Parfaites</text>
+<text x="200" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2F5D3A">Mario Rossi</text></svg>

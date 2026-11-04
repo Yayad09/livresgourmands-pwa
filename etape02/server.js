@@ -8,6 +8,16 @@ const { body, param, validationResult } = require('express-validator');
 const app = express();
 app.use(express.json());
 
+// CORS : autorise le front-end React (Vite, port 5173 par défaut)
+const FRONT_ORIGIN = process.env.FRONT_ORIGIN || 'http://localhost:5173';
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', FRONT_ORIGIN);
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+
 const pool = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
@@ -121,24 +131,46 @@ app.post('/api/categories', auth, roles('editeur', 'gestionnaire'),
   });
 
 // ---------- Ouvrages ----------
+// Filtres optionnels : ?categorie=<id>  ?q=<texte>  ?disponible=1 (stock > 0 seulement)
+// Les ouvrages épuisés sont renvoyés pour que le front affiche « Épuisé ».
 app.get('/api/ouvrages', async (req, res, next) => {
   try {
-    const [rows] = await pool.execute('SELECT * FROM ouvrages WHERE stock > 0');
+    const where = [];
+    const params = [];
+    if (req.query.categorie) { where.push('o.categorie_id = ?'); params.push(Number(req.query.categorie)); }
+    if (req.query.q) {
+      where.push('(o.titre LIKE ? OR o.auteur LIKE ?)');
+      params.push(`%${req.query.q}%`, `%${req.query.q}%`);
+    }
+    if (req.query.disponible === '1') where.push('o.stock > 0');
+    const [rows] = await pool.execute(
+      `SELECT o.*, c.nom AS categorie,
+              (SELECT ROUND(AVG(a.note), 1) FROM avis a WHERE a.ouvrage_id = o.id) AS note_moyenne
+       FROM ouvrages o JOIN categories c ON c.id = o.categorie_id
+       ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
+       ORDER BY o.created_at DESC, o.id DESC`, params);
     res.json(rows);
   } catch (e) { next(e); }
 });
 
 app.get('/api/ouvrages/:id', param('id').isInt(), validate, async (req, res, next) => {
   try {
-    const [rows] = await pool.execute('SELECT * FROM ouvrages WHERE id = ?', [req.params.id]);
+    const [rows] = await pool.execute(
+      `SELECT o.*, c.nom AS categorie FROM ouvrages o
+       JOIN categories c ON c.id = o.categorie_id WHERE o.id = ?`, [req.params.id]);
     if (!rows[0]) return res.status(404).json({ error: 'Ouvrage introuvable' });
     const [avis] = await pool.execute(
-      'SELECT note, date FROM avis WHERE ouvrage_id = ?', [req.params.id]);
-    res.json({ ...rows[0], avis });
+      `SELECT a.note, a.date, u.nom AS client FROM avis a
+       JOIN users u ON u.id = a.client_id WHERE a.ouvrage_id = ? ORDER BY a.date DESC`, [req.params.id]);
+    const [commentaires] = await pool.execute(
+      `SELECT cm.id, cm.contenu, cm.date_soumission, u.nom AS client FROM commentaires cm
+       JOIN users u ON u.id = cm.client_id
+       WHERE cm.ouvrage_id = ? AND cm.valide = true ORDER BY cm.date_soumission DESC`, [req.params.id]);
+    res.json({ ...rows[0], avis, commentaires });
   } catch (e) { next(e); }
 });
 
-app.post('/api/ouvrages', auth, roles('gestionnaire', 'editeur'),
+app.post('/api/ouvrages', auth, roles('gestionnaire', 'editeur', 'administrateur'),
   body('titre').notEmpty(),
   body('auteur').notEmpty(),
   body('isbn').notEmpty(),
@@ -148,10 +180,10 @@ app.post('/api/ouvrages', auth, roles('gestionnaire', 'editeur'),
   validate,
   async (req, res, next) => {
     try {
-      const { titre, auteur, isbn, description, prix, stock, categorie_id } = req.body;
+      const { titre, auteur, isbn, description, prix, stock, categorie_id, image } = req.body;
       const [r] = await pool.execute(
-        'INSERT INTO ouvrages (titre, auteur, isbn, description, prix, stock, categorie_id) VALUES (?, ?, ?, ?, ?, ?, ?)',
-        [titre, auteur, isbn, description || null, prix, stock, categorie_id]);
+        'INSERT INTO ouvrages (titre, auteur, isbn, description, prix, stock, categorie_id, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+        [titre, auteur, isbn, description || null, prix, stock, categorie_id, image || null]);
       res.status(201).json({ id: r.insertId });
     } catch (e) {
       if (e.code === 'ER_DUP_ENTRY') return res.status(409).json({ error: 'ISBN déjà existant' });
@@ -159,23 +191,39 @@ app.post('/api/ouvrages', auth, roles('gestionnaire', 'editeur'),
     }
   });
 
-app.put('/api/ouvrages/:id', auth, roles('gestionnaire', 'editeur'), param('id').isInt(), validate,
+app.put('/api/ouvrages/:id', auth, roles('gestionnaire', 'editeur', 'administrateur'),
+  param('id').isInt(),
+  body('prix').optional().isFloat({ min: 0 }),
+  body('stock').optional().isInt({ min: 0 }),
+  body('categorie_id').optional().isInt(),
+  validate,
   async (req, res, next) => {
     try {
-      const { titre, prix, stock, description } = req.body;
-      await pool.execute(
-        'UPDATE ouvrages SET titre = COALESCE(?, titre), prix = COALESCE(?, prix), stock = COALESCE(?, stock), description = COALESCE(?, description) WHERE id = ?',
-        [titre ?? null, prix ?? null, stock ?? null, description ?? null, req.params.id]);
+      const { titre, auteur, prix, stock, description, categorie_id, image } = req.body;
+      const [r] = await pool.execute(
+        `UPDATE ouvrages SET titre = COALESCE(?, titre), auteur = COALESCE(?, auteur),
+           prix = COALESCE(?, prix), stock = COALESCE(?, stock), description = COALESCE(?, description),
+           categorie_id = COALESCE(?, categorie_id), image = COALESCE(?, image)
+         WHERE id = ?`,
+        [titre ?? null, auteur ?? null, prix ?? null, stock ?? null, description ?? null,
+          categorie_id ?? null, image ?? null, req.params.id]);
+      if (!r.affectedRows) return res.status(404).json({ error: 'Ouvrage introuvable' });
       res.json({ message: 'Ouvrage mis à jour' });
     } catch (e) { next(e); }
   });
 
-app.delete('/api/ouvrages/:id', auth, roles('gestionnaire'), param('id').isInt(), validate,
+app.delete('/api/ouvrages/:id', auth, roles('gestionnaire', 'administrateur'), param('id').isInt(), validate,
   async (req, res, next) => {
     try {
-      await pool.execute('DELETE FROM ouvrages WHERE id = ?', [req.params.id]);
+      const [r] = await pool.execute('DELETE FROM ouvrages WHERE id = ?', [req.params.id]);
+      if (!r.affectedRows) return res.status(404).json({ error: 'Ouvrage introuvable' });
       res.json({ message: 'Ouvrage supprimé' });
-    } catch (e) { next(e); }
+    } catch (e) {
+      if (e.code === 'ER_ROW_IS_REFERENCED_2') {
+        return res.status(409).json({ error: 'Ouvrage lié à des commandes : mettez plutôt son stock à 0' });
+      }
+      next(e);
+    }
   });
 
 // ---------- Panier ----------
@@ -190,7 +238,7 @@ app.get('/api/panier', auth, roles('client'), async (req, res, next) => {
   try {
     const panierId = await getOrCreatePanier(req.user.id);
     const [rows] = await pool.execute(`
-      SELECT pi.id, pi.ouvrage_id, pi.quantite, pi.prix_unitaire, o.titre
+      SELECT pi.id, pi.ouvrage_id, pi.quantite, pi.prix_unitaire, o.titre, o.stock, o.image
       FROM panier_items pi JOIN ouvrages o ON o.id = pi.ouvrage_id
       WHERE pi.panier_id = ?`, [panierId]);
     res.json(rows);
@@ -212,9 +260,22 @@ app.post('/api/panier/items', auth, roles('client'),
         return res.status(400).json({ error: 'Stock insuffisant' });
       }
       const panierId = await getOrCreatePanier(req.user.id, conn);
-      await conn.execute(
-        'INSERT INTO panier_items (panier_id, ouvrage_id, quantite, prix_unitaire) VALUES (?, ?, ?, ?)',
-        [panierId, req.body.ouvrage_id, req.body.quantite, ouv[0].prix]);
+      // Si l'ouvrage est déjà dans le panier, on cumule la quantité
+      const [exist] = await conn.execute(
+        'SELECT id, quantite FROM panier_items WHERE panier_id = ? AND ouvrage_id = ?',
+        [panierId, req.body.ouvrage_id]);
+      if (exist[0]) {
+        if (ouv[0].stock < exist[0].quantite + req.body.quantite) {
+          await conn.rollback();
+          return res.status(400).json({ error: 'Stock insuffisant' });
+        }
+        await conn.execute('UPDATE panier_items SET quantite = quantite + ? WHERE id = ?',
+          [req.body.quantite, exist[0].id]);
+      } else {
+        await conn.execute(
+          'INSERT INTO panier_items (panier_id, ouvrage_id, quantite, prix_unitaire) VALUES (?, ?, ?, ?)',
+          [panierId, req.body.ouvrage_id, req.body.quantite, ouv[0].prix]);
+      }
       await conn.commit();
       res.status(201).json({ message: 'Article ajouté' });
     } catch (e) {
@@ -223,6 +284,23 @@ app.post('/api/panier/items', auth, roles('client'),
     } finally {
       conn.release();
     }
+  });
+
+app.put('/api/panier/items/:id', auth, roles('client'),
+  param('id').isInt(),
+  body('quantite').isInt({ min: 1 }),
+  validate,
+  async (req, res, next) => {
+    try {
+      const [rows] = await pool.execute(
+        `SELECT pi.id, o.stock FROM panier_items pi
+         JOIN panier p ON p.id = pi.panier_id JOIN ouvrages o ON o.id = pi.ouvrage_id
+         WHERE pi.id = ? AND p.client_id = ?`, [req.params.id, req.user.id]);
+      if (!rows[0]) return res.status(404).json({ error: 'Article introuvable' });
+      if (rows[0].stock < req.body.quantite) return res.status(400).json({ error: 'Stock insuffisant' });
+      await pool.execute('UPDATE panier_items SET quantite = ? WHERE id = ?', [req.body.quantite, req.params.id]);
+      res.json({ message: 'Quantité mise à jour' });
+    } catch (e) { next(e); }
   });
 
 app.delete('/api/panier/items/:id', auth, roles('client'), param('id').isInt(), validate,
@@ -291,6 +369,17 @@ app.get('/api/commandes', auth, roles('client'), async (req, res, next) => {
   } catch (e) { next(e); }
 });
 
+// Toutes les commandes (dashboard administrateur / gestionnaire)
+app.get('/api/admin/commandes', auth, roles('administrateur', 'gestionnaire'), async (req, res, next) => {
+  try {
+    const [rows] = await pool.execute(
+      `SELECT c.*, u.nom AS client, u.email,
+              (SELECT SUM(ci.quantite) FROM commande_items ci WHERE ci.commande_id = c.id) AS nb_articles
+       FROM commandes c JOIN users u ON u.id = c.client_id ORDER BY c.date DESC`);
+    res.json(rows);
+  } catch (e) { next(e); }
+});
+
 app.get('/api/commandes/:id', auth, param('id').isInt(), validate, async (req, res, next) => {
   try {
     const admin = ['administrateur', 'gestionnaire'].includes(req.user.role);
@@ -325,12 +414,42 @@ app.post('/api/listes', auth, roles('client'), body('nom').notEmpty(), validate,
     } catch (e) { next(e); }
   });
 
+// Listes du client connecté
+app.get('/api/listes', auth, roles('client'), async (req, res, next) => {
+  try {
+    const [rows] = await pool.execute(
+      `SELECT l.id, l.nom, l.code_partage, l.date_creation,
+              (SELECT COUNT(*) FROM liste_items li WHERE li.liste_id = l.id) AS nb_items
+       FROM listes_cadeaux l WHERE l.proprietaire_id = ? ORDER BY l.date_creation DESC`, [req.user.id]);
+    res.json(rows);
+  } catch (e) { next(e); }
+});
+
+app.post('/api/listes/:id/items', auth, roles('client'),
+  param('id').isInt(),
+  body('ouvrage_id').isInt(),
+  body('quantite').optional().isInt({ min: 1 }),
+  validate,
+  async (req, res, next) => {
+    try {
+      const [l] = await pool.execute(
+        'SELECT id FROM listes_cadeaux WHERE id = ? AND proprietaire_id = ?', [req.params.id, req.user.id]);
+      if (!l[0]) return res.status(404).json({ error: 'Liste introuvable' });
+      const [o] = await pool.execute('SELECT id FROM ouvrages WHERE id = ?', [req.body.ouvrage_id]);
+      if (!o[0]) return res.status(404).json({ error: 'Ouvrage introuvable' });
+      await pool.execute(
+        'INSERT INTO liste_items (liste_id, ouvrage_id, quantite_souhaitee) VALUES (?, ?, ?)',
+        [req.params.id, req.body.ouvrage_id, req.body.quantite || 1]);
+      res.status(201).json({ message: 'Ouvrage ajouté à la liste' });
+    } catch (e) { next(e); }
+  });
+
 app.get('/api/listes/:code', async (req, res, next) => {
   try {
     const [rows] = await pool.execute('SELECT id, nom FROM listes_cadeaux WHERE code_partage = ?', [req.params.code]);
     if (!rows[0]) return res.status(404).json({ error: 'Liste introuvable' });
     const [items] = await pool.execute(
-      `SELECT li.id, li.ouvrage_id, li.quantite_souhaitee, o.titre, o.prix, o.stock
+      `SELECT li.id, li.ouvrage_id, li.quantite_souhaitee, o.titre, o.prix, o.stock, o.image
        FROM liste_items li JOIN ouvrages o ON o.id = li.ouvrage_id WHERE li.liste_id = ?`, [rows[0].id]);
     res.json({ ...rows[0], items });
   } catch (e) { next(e); }
