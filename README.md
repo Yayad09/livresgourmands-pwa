@@ -61,7 +61,7 @@ Ouvrir http://localhost:5173. Comptes de test (mot de passe `password123`) :
 - **API complétée** (`etape02/`) : CORS, filtres sur `/api/ouvrages`, images, modification de quantité dans le panier,
   commandes pour l'admin, routes des listes de cadeaux, comptes de test fonctionnels. Détails : [`etape02/README.md`](etape02/README.md).
 - **Conception visuelle** (`livrables/`) : dossier de conception PDF (modèle Bonnevaux) avec wireframes desktop et mobile,
-  charte graphique et maquettes ; guide des frames Figma et des liaisons du prototype Adobe XD ; script de la vidéo de démonstration.
+  charte graphique et maquettes ; wireframes et prototype interactif réalisés dans Figma (Adobe XD n'étant plus commercialisé) ; script de la vidéo de démonstration.
 
 ## Répartition des rôles
 | Membre | Responsabilités |

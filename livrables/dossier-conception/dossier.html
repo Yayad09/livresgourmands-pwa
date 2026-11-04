@@ -148,8 +148,8 @@
   </ol>
   <div class="box" style="margin-top:20px">
     <h4>Liens des livrables</h4>
-    <p style="margin:0">Wireframes Figma : <em>voir le fichier liens.txt du ZIP</em><br>
-    Prototype interactif Adobe XD : <em>voir le fichier liens.txt du ZIP</em><br>
+    <p style="margin:0">Wireframes Figma : https://www.figma.com/design/7QefPIh7WPwxhqwBJJbr5L/livresgourmands---Wireframes<br>
+    Prototype interactif (Figma, page « Prototype ») : lien complet dans le fichier liens.txt du ZIP<br>
     Dépôt GitHub : https://github.com/yayad09/livresgourmands-pwa</p>
   </div>
 </section>
@@ -164,7 +164,7 @@
     <li><strong>Arborescence</strong> : organisation des pages et des parcours par rôle.</li>
     <li><strong>Wireframes basse fidélité</strong> (Figma) : structure de chaque page en version desktop et mobile, sans couleur.</li>
     <li><strong>Planche de tendance et charte graphique</strong> : ambiance, couleurs, typographies, composants.</li>
-    <li><strong>Prototype interactif</strong> (Adobe XD) : simulation des clics, transitions et ajouts au panier pour chaque rôle.</li>
+    <li><strong>Prototype interactif</strong> (Figma, à la place d'Adobe XD, qui n'est plus commercialisé) : simulation des clics, transitions et ajouts au panier pour chaque rôle.</li>
     <li><strong>Intégration</strong> : développement React + Bootstrap, connexion à l'API avec Axios.</li>
     <li><strong>Contrôle qualité</strong> : tests responsive (390, 768 et 1280 px), contrastes WCAG AA, navigation au clavier, messages d'erreur.</li>
   </ol>
@@ -210,7 +210,7 @@
     <tr><th>Back-end</th><td>Node.js / Express, MySQL, JWT, bcrypt, express-validator (API de l'étape 2, complétée).</td></tr>
     <tr><th>Compatibilité</th><td>Chrome, Firefox, Safari, Edge récents ; mobile (≥ 360 px), tablette, desktop.</td></tr>
     <tr><th>Accessibilité</th><td>Objectif WCAG 2.1 niveau AA : contraste ≥ 4,5:1, navigation clavier, libellés de formulaires, textes alternatifs.</td></tr>
-    <tr><th>Outils de conception</th><td>Figma (wireframes), Adobe XD (prototype interactif), Playwright (captures et tests).</td></tr>
+    <tr><th>Outils de conception</th><td>Figma (wireframes et prototype interactif ; Adobe XD n'est plus commercialisé), Playwright (captures et tests).</td></tr>
   </table>
   <h3>Endpoints utilisés par l'interface</h3>
   <table>
@@ -226,7 +226,7 @@
   <table>
     <tr><th>Poste</th><th>Durée</th><th>Coût estimé*</th></tr>
     <tr><td>Analyse, arborescence, wireframes</td><td>2 jours</td><td>1 000 $</td></tr>
-    <tr><td>Charte graphique et prototype XD</td><td>2 jours</td><td>1 000 $</td></tr>
+    <tr><td>Charte graphique et prototype interactif</td><td>2 jours</td><td>1 000 $</td></tr>
     <tr><td>Intégration React + connexion API</td><td>6 jours</td><td>3 000 $</td></tr>
     <tr><td>Tests, accessibilité, corrections</td><td>2 jours</td><td>1 000 $</td></tr>
     <tr><td>Nom de domaine + hébergement (1 an)</td><td>n/a</td><td>250 $</td></tr>
@@ -266,34 +266,35 @@
 </section>
 
 <section class="page dense">
-  <h2>Parcours utilisateurs (prototype XD)</h2>
-  <p>Le prototype Adobe XD reproduit ces trois parcours. Chaque étape correspond à un écran (artboard) relié par une interaction « Tap » avec une transition « Dissolve » (0,3 s) ou « Slide left » pour les étapes de commande.</p>
-  <h3>Parcours Client : acheter un livre</h3>
+  <h2>Parcours utilisateurs (prototype interactif)</h2>
+  <p>Le prototype est réalisé dans Figma (page « Prototype »), Adobe XD n'étant plus commercialisé. Il comprend <strong>14 écrans haute fidélité</strong> et <strong>21 liens</strong>. Chaque lien est une interaction « Au clic » → « Naviguer vers », avec une transition « Fondu » de 300 ms. Trois points de départ de flux correspondent aux trois rôles.</p>
+  <h3>Parcours Client : acheter un livre (départ : 01-Accueil)</h3>
   <table>
-    <tr><th>#</th><th>Écran</th><th>Interaction</th><th>Résultat</th></tr>
-    <tr><td>1</td><td>Accueil</td><td>Tap sur la pastille « Pâtisserie »</td><td>Liste filtrée</td></tr>
-    <tr><td>2</td><td>Accueil filtrée</td><td>Tap sur la carte « Macarons et Merveilles »</td><td>Fiche produit</td></tr>
-    <tr><td>3</td><td>Fiche produit</td><td>Tap « + » puis « Ajouter au panier »</td><td>Notification + compteur du panier à 2</td></tr>
-    <tr><td>4</td><td>Fiche (état ajouté)</td><td>Tap sur l'icône panier</td><td>Panier</td></tr>
-    <tr><td>5</td><td>Panier</td><td>Tap « Passer la commande »</td><td>Connexion (si non connecté) puis Commande</td></tr>
-    <tr><td>6</td><td>Commande</td><td>Remplir l'adresse, choisir la livraison et le paiement, tap « Confirmer et payer »</td><td>Confirmation</td></tr>
+    <tr><th>#</th><th>Écran</th><th>Élément cliqué</th><th>Écran suivant</th></tr>
+    <tr><td>1</td><td>01 Accueil</td><td>Pastille « Pâtisserie »</td><td>02 Accueil filtré</td></tr>
+    <tr><td>2</td><td>02 Accueil filtré (Pâtisserie)</td><td>Carte « Macarons et Merveilles »</td><td>03 Fiche produit</td></tr>
+    <tr><td>3</td><td>03 Fiche produit</td><td>« Ajouter au panier »</td><td>04 Fiche produit (notification, compteur du panier)</td></tr>
+    <tr><td>4</td><td>04 Fiche produit ajouté</td><td>Icône panier</td><td>05 Panier</td></tr>
+    <tr><td>5</td><td>05 Panier</td><td>« Passer la commande »</td><td>06 Connexion</td></tr>
+    <tr><td>6</td><td>06 Connexion</td><td>« Se connecter »</td><td>07 Commande</td></tr>
+    <tr><td>7</td><td>07 Commande (adresse, livraison, paiement)</td><td>« Confirmer et payer »</td><td>08 Confirmation</td></tr>
+    <tr><td>8</td><td>08 Confirmation</td><td>« Continuer mes achats »</td><td>01 Accueil</td></tr>
   </table>
-  <h3>Parcours Ami : offrir depuis une liste</h3>
+  <h3>Parcours Ami : offrir depuis une liste (départ : 09-Liste-cadeaux-code)</h3>
   <table>
-    <tr><th>#</th><th>Écran</th><th>Interaction</th><th>Résultat</th></tr>
-    <tr><td>1</td><td>Accueil</td><td>Tap « Listes de cadeaux »</td><td>Page listes</td></tr>
-    <tr><td>2</td><td>Listes</td><td>Saisir le code reçu, tap « Voir la liste »</td><td>Livres souhaités</td></tr>
-    <tr><td>3</td><td>Liste ouverte</td><td>Tap « Offrir » sur un livre</td><td>Ajout au panier, puis parcours de commande</td></tr>
+    <tr><th>#</th><th>Écran</th><th>Élément cliqué</th><th>Écran suivant</th></tr>
+    <tr><td>1</td><td>01 Accueil</td><td>Menu « Listes de cadeaux »</td><td>09 Saisie du code personnel</td></tr>
+    <tr><td>2</td><td>09 Saisie du code</td><td>« Voir la liste »</td><td>10 Liste ouverte</td></tr>
+    <tr><td>3</td><td>10 Liste ouverte</td><td>« Offrir » sur un livre</td><td>05 Panier, puis parcours de commande</td></tr>
   </table>
-  <h3>Parcours Administrateur : gérer le catalogue</h3>
+  <h3>Parcours Administrateur : gérer le site (départ : 11-Admin-tableau-de-bord)</h3>
   <table>
-    <tr><th>#</th><th>Écran</th><th>Interaction</th><th>Résultat</th></tr>
-    <tr><td>1</td><td>Connexion</td><td>Se connecter avec un compte administrateur</td><td>Tableau de bord</td></tr>
-    <tr><td>2</td><td>Tableau de bord</td><td>Tap « Ouvrages » dans le menu latéral</td><td>Liste des ouvrages</td></tr>
-    <tr><td>3</td><td>Ouvrages</td><td>Tap « Ajouter un ouvrage » / icône crayon</td><td>Fenêtre de formulaire (overlay)</td></tr>
-    <tr><td>4</td><td>Formulaire</td><td>Tap « Enregistrer »</td><td>Retour à la liste + notification</td></tr>
-    <tr><td>5</td><td>Ouvrages</td><td>Tap icône corbeille, puis « Supprimer »</td><td>Fenêtre de confirmation puis ligne retirée</td></tr>
-    <tr><td>6</td><td>Commandes</td><td>Changer le statut d'une commande</td><td>Badge mis à jour</td></tr>
+    <tr><th>#</th><th>Écran</th><th>Élément cliqué</th><th>Écran suivant</th></tr>
+    <tr><td>1</td><td>06 Connexion</td><td>Compte « Administrateur »</td><td>11 Tableau de bord</td></tr>
+    <tr><td>2</td><td>11 Tableau de bord</td><td>Menu « Ouvrages » / « Commandes »</td><td>12 Ouvrages / 14 Commandes</td></tr>
+    <tr><td>3</td><td>12 Ouvrages</td><td>« Ajouter un ouvrage »</td><td>13 Formulaire (fenêtre modale)</td></tr>
+    <tr><td>4</td><td>13 Formulaire</td><td>« Enregistrer » ou « Annuler »</td><td>12 Ouvrages</td></tr>
+    <tr><td>5</td><td>12 Ouvrages / 14 Commandes</td><td>Menu latéral</td><td>Navigation entre 11, 12 et 14</td></tr>
   </table>
 </section>
 
